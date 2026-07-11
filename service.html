@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - J&B Lawn Services</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lawnGreen: '#5CB85C',
+                        lawnDarkGreen: '#0B2214',
+                        lawnCardBg: '#133521',
+                        lawnBgLight: '#F4F6F4',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Hide scrollbars across all browsers while keeping scroll functionality */
+        html {
+            scrollbar-width: none;
+            visibility: visible;
+            opacity: 1;
+        }
+        body {
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .smooth-transition {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Scroll reveal animation classes */
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal-item.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @keyframes smoothFadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-smooth-entry {
+            animation: smoothFadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</head>
+<body class="font-sans text-white bg-lawnDarkGreen overflow-x-hidden overflow-y-scroll">
+
+    <!-- MAIN NAVIGATION -->
+    <nav class="bg-lawnDarkGreen/95 backdrop-blur-md text-white sticky top-0 z-50 border-b border-white/5 shadow-lg px-4 md:px-12 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
+            
+            <!-- Logo Area -->
+            <a href="index.html" class="flex items-center gap-3 group cursor-pointer">
+                <div class="w-10 h-10 bg-gradient-to-br from-lawnGreen to-emerald-600 rounded-xl flex items-center justify-center text-white shadow-md shadow-lawnGreen/20 smooth-transition group-hover:scale-105">
+                    <i class="fas fa-leaf text-lg"></i>
+                </div>
+                <div class="leading-tight">
+                    <span class="text-lg font-extrabold tracking-wider block text-white">J&B</span>
+                    <span class="text-[10px] text-lawnGreen font-semibold tracking-widest uppercase block -mt-1">LAWN SERVICES</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden lg:flex items-center gap-8 font-medium text-white/80 text-xs uppercase tracking-wider">
+                <a href="index.html" class="hover:text-lawnGreen smooth-transition">Home</a>
+                <a href="about.html" class="hover:text-lawnGreen smooth-transition">About</a>
+                <a href="service.html" class="text-lawnGreen font-bold">Services</a>
+                <a href="project.html" class="hover:text-lawnGreen smooth-transition">Project</a>
+                <a href="contact.html" class="hover:text-lawnGreen smooth-transition">Contact</a>
+            </div>
+
+            <!-- Action/Contact Button & Hamburger Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="tel:9132779514" class="flex items-center gap-3 group cursor-pointer">
+                    <div class="bg-lawnGreen text-white p-2.5 rounded-full hidden sm:flex items-center justify-center w-10 h-10 group-hover:animate-bounce">
+                        <i class="fas fa-phone-alt text-sm"></i>
+                    </div>
+                    <div class="text-right sm:text-left">
+                        <p class="text-[10px] text-white/50 font-medium uppercase tracking-wider">Call Now</p>
+                        <p class="text-sm md:text-base font-bold text-white group-hover:text-lawnGreen smooth-transition">913-277-9514</p>
+                    </div>
+                </a>
+
+                <!-- Mobile Menu Button (Hamburger) -->
+                <button id="menu-btn" class="lg:hidden text-white focus:outline-none text-2xl p-2 cursor-pointer smooth-transition">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden flex-col gap-4 pt-4 pb-2 px-2 border-t border-white/10 mt-4 font-medium text-xs uppercase tracking-wider animate-smooth-entry">
+            <a href="index.html" class="block py-2 hover:text-lawnGreen smooth-transition">Home</a>
+            <a href="about.html" class="block py-2 hover:text-lawnGreen smooth-transition">About</a>
+            <a href="service.html" class="block py-2 text-lawnGreen font-bold">Services</a>
+            <a href="project.html" class="block py-2 hover:text-lawnGreen smooth-transition">Project</a>
+            <a href="contact.html" class="block py-2 hover:text-lawnGreen smooth-transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HEADER SECTION -->
+    <header class="pt-12 pb-12 px-4 md:px-12 text-center max-w-5xl mx-auto">
+        <span class="bg-white/15 backdrop-blur-md text-lawnGreen text-xs font-semibold px-4 py-2 rounded-full inline-flex items-center gap-2 mb-4 border border-white/10 opacity-0 animate-smooth-entry" style="animation-delay: 0.1s;">
+            <span class="w-2 h-2 rounded-full bg-lawnGreen animate-ping"></span> Step-by-Step Excellence
+        </span>
+        
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight mb-4 opacity-0 animate-smooth-entry" style="animation-delay: 0.25s;">
+            Our Services <span class="text-lawnGreen">Workflow</span>
+        </h1>
+        
+        <p class="text-white/60 max-w-xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed opacity-0 animate-smooth-entry" style="animation-delay: 0.4s;">
+            Scroll down to explore our sequential execution phases. Click on any service card to view complete specifications and popup insights.
+        </p>
+    </header>
+
+    <!-- TIMELINE / STEP-BY-STEP SERVICES SECTION -->
+    <main class="max-w-5xl mx-auto px-4 md:px-12 pb-24 relative">
+        
+        <!-- Central Vertical Line (Desktop) -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 top-4 bottom-4 w-1 bg-lawnGreen/30 hidden md:block rounded-full"></div>
+
+        <div class="space-y-16 md:space-y-24 relative">
+            
+            <!-- STEP 01 -->
+            <div class="reveal-item flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 group cursor-pointer" onclick="openPopup('Lawn Mowing & Care', 'Our expert lawn mowing ensures precise height levels, sharp border trimming, and consistent turf health promotion. Done weekly or bi-weekly depending on seasonal growth.', 'images/about-15.jpg')">
+                <div class="w-full md:w-[45%] text-left md:text-right bg-lawnCardBg/80 backdrop-blur-sm p-6 rounded-2xl border border-white/10 group-hover:border-lawnGreen smooth-transition shadow-xl">
+                    <span class="text-lawnGreen font-bold text-xs uppercase tracking-widest block mb-1">Phase 01</span>
+                    <h3 class="text-xl sm:text-2xl font-black mb-2 text-white group-hover:text-lawnGreen smooth-transition">Lawn Mowing & Care</h3>
+                    <p class="text-white/60 text-xs md:text-sm leading-relaxed">Routine precise cutting and trimming tailored to sustain deep green color and uniform yard neatness.</p>
+                    <span class="mt-4 inline-flex items-center gap-2 text-xs text-lawnGreen font-semibold">Learn more &rarr;</span>
+                </div>
+                <!-- Step Number Bubble -->
+                <div class="z-10 w-14 h-14 md:w-16 md:h-16 bg-lawnDarkGreen border-4 border-lawnGreen rounded-full flex items-center justify-center text-lawnGreen font-black text-lg md:text-xl shadow-lg group-hover:scale-110 smooth-transition my-2 md:my-0">
+                    01
+                </div>
+                <div class="w-full md:w-[45%] overflow-hidden rounded-2xl h-48 md:h-52 shadow-xl border border-white/10">
+                    <img src="images/about-15.jpg" class="w-full h-full object-cover group-hover:scale-105 smooth-transition" alt="Lawn Mowing">
+                </div>
+            </div>
+
+            <!-- STEP 02 -->
+            <div class="reveal-item flex flex-col md:flex-row-reverse items-center justify-between gap-6 md:gap-8 group cursor-pointer" onclick="openPopup('Landscape Design', 'We create personalized garden layouts, select climate-resilient plants, shrubs, and trees to elevate your property aesthetic completely.', 'images/grass-removal.jpg')">
+                <div class="w-full md:w-[45%] text-left bg-lawnCardBg/80 backdrop-blur-sm p-6 rounded-2xl border border-white/10 group-hover:border-lawnGreen smooth-transition shadow-xl">
+                    <span class="text-lawnGreen font-bold text-xs uppercase tracking-widest block mb-1">Phase 02</span>
+                    <h3 class="text-xl sm:text-2xl font-black mb-2 text-white group-hover:text-lawnGreen smooth-transition">Landscape Design</h3>
+                    <p class="text-white/60 text-xs md:text-sm leading-relaxed">Custom aesthetic layouts blending flora, structural elegance, and beautiful outdoor balance.</p>
+                    <span class="mt-4 inline-flex items-center gap-2 text-xs text-lawnGreen font-semibold">Learn more &rarr;</span>
+                </div>
+                <div class="z-10 w-14 h-14 md:w-16 md:h-16 bg-lawnDarkGreen border-4 border-lawnGreen rounded-full flex items-center justify-center text-lawnGreen font-black text-lg md:text-xl shadow-lg group-hover:scale-110 smooth-transition my-2 md:my-0">
+                    02
+                </div>
+                <div class="w-full md:w-[45%] overflow-hidden rounded-2xl h-48 md:h-52 shadow-xl border border-white/10">
+                    <img src="images/grass-removal.jpg" class="w-full h-full object-cover group-hover:scale-105 smooth-transition" alt="Landscape Design">
+                </div>
+            </div>
+
+            <!-- STEP 03 -->
+            <div class="reveal-item flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 group cursor-pointer" onclick="openPopup('Mulch Bed Care', 'High-quality organic mulch installation to conserve moisture, prevent weed growth, and enrich the soil ecosystem beneath your plants.', 'images/about-7.jpg')">
+                <div class="w-full md:w-[45%] text-left md:text-right bg-lawnCardBg/80 backdrop-blur-sm p-6 rounded-2xl border border-white/10 group-hover:border-lawnGreen smooth-transition shadow-xl">
+                    <span class="text-lawnGreen font-bold text-xs uppercase tracking-widest block mb-1">Phase 03</span>
+                    <h3 class="text-xl sm:text-2xl font-black mb-2 text-white group-hover:text-lawnGreen smooth-transition">Mulch Bed Care</h3>
+                    <p class="text-white/60 text-xs md:text-sm leading-relaxed">Nutrient-dense mulch layering and edging that protects plant roots and sharpens visual appeal.</p>
+                    <span class="mt-4 inline-flex items-center gap-2 text-xs text-lawnGreen font-semibold">Learn more &rarr;</span>
+                </div>
+                <div class="z-10 w-14 h-14 md:w-16 md:h-16 bg-lawnDarkGreen border-4 border-lawnGreen rounded-full flex items-center justify-center text-lawnGreen font-black text-lg md:text-xl shadow-lg group-hover:scale-110 smooth-transition my-2 md:my-0">
+                    03
+                </div>
+                <div class="w-full md:w-[45%] overflow-hidden rounded-2xl h-48 md:h-52 shadow-xl border border-white/10">
+                    <img src="images/about-7.jpg" class="w-full h-full object-cover group-hover:scale-105 smooth-transition" alt="Mulch Bed Care">
+                </div>
+            </div>
+
+            <!-- STEP 04 -->
+            <div class="reveal-item flex flex-col md:flex-row-reverse items-center justify-between gap-6 md:gap-8 group cursor-pointer" onclick="openPopup('Hardscape & Patios', 'Robust patio stone placement, precise stone edging, and walkway installations designed for lasting heavy durability.', 'images/lawn.jpg')">
+                <div class="w-full md:w-[45%] text-left bg-lawnCardBg/80 backdrop-blur-sm p-6 rounded-2xl border border-white/10 group-hover:border-lawnGreen smooth-transition shadow-xl">
+                    <span class="text-lawnGreen font-bold text-xs uppercase tracking-widest block mb-1">Phase 04</span>
+                    <h3 class="text-xl sm:text-2xl font-black mb-2 text-white group-hover:text-lawnGreen smooth-transition">Hardscape & Patios</h3>
+                    <p class="text-white/60 text-xs md:text-sm leading-relaxed">Solid pathways, retaining borders, and functional stone structures for practical outdoor living.</p>
+                    <span class="mt-4 inline-flex items-center gap-2 text-xs text-lawnGreen font-semibold">Learn more &rarr;</span>
+                </div>
+                <div class="z-10 w-14 h-14 md:w-16 md:h-16 bg-lawnDarkGreen border-4 border-lawnGreen rounded-full flex items-center justify-center text-lawnGreen font-black text-lg md:text-xl shadow-lg group-hover:scale-110 smooth-transition my-2 md:my-0">
+                    04
+                </div>
+                <div class="w-full md:w-[45%] overflow-hidden rounded-2xl h-48 md:h-52 shadow-xl border border-white/10">
+                    <img src="images/lawn.jpg" class="w-full h-full object-cover group-hover:scale-105 smooth-transition" alt="Hardscape and Patios">
+                </div>
+            </div>
+
+            <!-- STEP 05 -->
+            <div class="reveal-item flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 group cursor-pointer" onclick="openPopup('Seasonal Clean-up', 'Clearing heavy leaf residue, fallen debris, and preparing your entire lawn layout for severe seasonal weather changes.', 'images/tree trimming 3.jpg')">
+                <div class="w-full md:w-[45%] text-left md:text-right bg-lawnCardBg/80 backdrop-blur-sm p-6 rounded-2xl border border-white/10 group-hover:border-lawnGreen smooth-transition shadow-xl">
+                    <span class="text-lawnGreen font-bold text-xs uppercase tracking-widest block mb-1">Phase 05</span>
+                    <h3 class="text-xl sm:text-2xl font-black mb-2 text-white group-hover:text-lawnGreen smooth-transition">Seasonal Clean-up</h3>
+                    <p class="text-white/60 text-xs md:text-sm leading-relaxed">Comprehensive yard sweeps, leaf clearing, and total property revival post-storm or autumn.</p>
+                    <span class="mt-4 inline-flex items-center gap-2 text-xs text-lawnGreen font-semibold">Learn more &rarr;</span>
+                </div>
+                <div class="z-10 w-14 h-14 md:w-16 md:h-16 bg-lawnDarkGreen border-4 border-lawnGreen rounded-full flex items-center justify-center text-lawnGreen font-black text-lg md:text-xl shadow-lg group-hover:scale-110 smooth-transition my-2 md:my-0">
+                    05
+                </div>
+                <div class="w-full md:w-[45%] overflow-hidden rounded-2xl h-48 md:h-52 shadow-xl border border-white/10">
+                    <img src="images/tree trimming 3.jpg" class="w-full h-full object-cover group-hover:scale-105 smooth-transition" alt="Seasonal Clean-up">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- POPUP MODAL -->
+    <div id="servicePopup" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none smooth-transition">
+        <div class="bg-[#F8F5F0] text-gray-900 rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl relative transform scale-95 smooth-transition flex flex-col md:flex-row" id="popupContentBox">
+            <!-- Close Button -->
+            <button onclick="closePopup()" class="absolute top-4 right-4 z-20 w-9 h-9 bg-lawnDarkGreen/20 hover:bg-lawnDarkGreen/40 rounded-full flex items-center justify-center text-gray-800 cursor-pointer smooth-transition">
+                <i class="fas fa-times text-sm"></i>
+            </button>
+            
+            <!-- Popup Image Side -->
+            <div class="w-full md:w-1/2 h-56 md:h-auto bg-cover bg-center relative" id="popupImage" style="background-image: url('');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                    <span class="bg-lawnGreen text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">J&B Verified Service</span>
+                </div>
+            </div>
+
+            <!-- Popup Details Side -->
+            <div class="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl md:text-2xl font-black mb-3 text-lawnDarkGreen" id="popupTitle">Service Title</h3>
+                    <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-6" id="popupDesc">Service detailed overview goes here...</p>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <button onclick="window.location.href='contact.html'; closePopup();" class="bg-lawnDarkGreen hover:bg-emerald-900 text-white font-bold py-3 px-6 rounded-full text-center text-xs uppercase tracking-wider smooth-transition cursor-pointer">
+                        Book This Service Now
+                    </button>
+                    <button onclick="closePopup()" class="text-gray-500 hover:text-gray-800 text-xs font-semibold py-2 text-center cursor-pointer">
+                        Close Window
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHORT FOOTER WITH MESSAGE INPUT FIELD -->
+    <footer class="bg-lawnDarkGreen text-white/60 border-t border-white/5 py-10 px-4 md:px-12 text-xs">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-center md:text-left">&copy; 2026 J&B Lawn Services. All rights reserved.</p>
+            
+            <div class="w-full md:w-auto max-w-md flex flex-col items-center">
+                <form action="https://api.web3forms.com/submit" method="POST" id="quick-footer-form" class="flex w-full items-center gap-2 bg-white/5 p-1.5 rounded-full border border-white/15">
+                    <input type="hidden" name="access_key" value="04ad0d1d-51a2-4dc8-92c0-a3a531277e6f">
+                    <input type="hidden" name="subject" value="New Quick Message from Footer Bar">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <input type="text" name="message" placeholder="Send a quick message..." required
+                        class="w-full bg-transparent text-white placeholder-white/40 text-xs px-4 py-2 focus:outline-none">
+                    
+                    <button type="submit" id="quick-submit-btn"
+                        class="bg-lawnGreen hover:bg-green-600 active:scale-95 text-white font-bold px-5 py-2.5 rounded-full smooth-transition whitespace-nowrap cursor-pointer">
+                        Send <i class="fas fa-paper-plane ml-1 text-[10px]"></i>
+                    </button>
+                </form>
+
+                <div id="quick-form-result" class="mt-2 text-center text-[10px] font-semibold"></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE MENU TOGGLE SCRIPT -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+    </script>
+
+    <script>
+        const quickForm = document.getElementById('quick-footer-form');
+        const quickResult = document.getElementById('quick-form-result');
+        const quickSubmitBtn = document.getElementById('quick-submit-btn');
+
+        quickForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(quickForm);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            
+            quickResult.innerHTML = "Sending...";
+            quickResult.className = "mt-2 text-center text-[10px] font-semibold text-white/50";
+            quickSubmitBtn.disabled = true;
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let jsonResponse = await response.json();
+                if (response.status == 200) {
+                    quickResult.innerHTML = "Success! Message sent.";
+                    quickResult.className = "mt-2 text-center text-[10px] font-semibold text-lawnGreen";
+                    quickForm.reset();
+                } else {
+                    quickResult.innerHTML = jsonResponse.message;
+                    quickResult.className = "mt-2 text-center text-[10px] font-semibold text-red-400";
+                }
+            })
+            .catch(error => {
+                quickResult.innerHTML = "Failed! Try again.";
+                quickResult.className = "mt-2 text-center text-[10px] font-semibold text-red-400";
+            })
+            .then(() => {
+                quickSubmitBtn.disabled = false;
+                setTimeout(() => {
+                    quickResult.innerHTML = "";
+                }, 5000);
+            });
+        });
+    </script>
+
+    <!-- INTERSECTION OBSERVER FOR SCROLL ANIMATIONS & POPUP LOGIC -->
+    <script>
+        // Scroll Reveal Animation Observer
+        document.addEventListener("DOMContentLoaded", function () {
+            const observerOptions = {
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-item').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Popup Handlers
+        const popup = document.getElementById('servicePopup');
+        const popupContentBox = document.getElementById('popupContentBox');
+        const popupTitle = document.getElementById('popupTitle');
+        const popupDesc = document.getElementById('popupDesc');
+        const popupImage = document.getElementById('popupImage');
+
+        function openPopup(title, desc, imgUrl) {
+            popupTitle.innerText = title;
+            popupDesc.innerText = desc;
+            popupImage.style.backgroundImage = `url('${imgUrl}')`;
+            
+            popup.classList.remove('opacity-0', 'pointer-events-none');
+            popupContentBox.classList.remove('scale-95');
+            popupContentBox.classList.add('scale-100');
+        }
+
+        function closePopup() {
+            popup.classList.add('opacity-0', 'pointer-events-none');
+            popupContentBox.classList.remove('scale-100');
+            popupContentBox.classList.add('scale-95');
+        }
+
+        // Close on clicking outside modal box
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                closePopup();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,2105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J&B Lawn Services - Transform Your Yard</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lawnGreen: '#5CB85C',
+                        lawnDarkGreen: '#0B2214',
+                        lawnBgLight: '#F4F6F4',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+/* Hide scrollbars across all browsers while keeping scroll functionality */
+        html {
+            scrollbar-width: none; /* Firefox-er jonno */
+            visibility: visible;
+            opacity: 1;
+        }
+    body {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+    }
+        body::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, ebong Opera-r jonno */
+        }
+
+        /* Floating Animations for Text Only */
+        @keyframes float-text-1 {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(-6px) translateX(2px); }
+        }
+        @keyframes float-text-2 {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(-10px) translateX(-3px); }
+        }
+        
+        .animate-text-1 { animation: float-text-1 4s ease-in-out infinite; }
+        .animate-text-2 { animation: float-text-2 4.5s ease-in-out infinite; }
+        .animate-text-3 { animation: float-text-1 5s ease-in-out infinite; animation-delay: 0.5s; }
+        .animate-text-4 { animation: float-text-2 4.8s ease-in-out infinite; animation-delay: 1s; }
+        .animate-text-5 { animation: float-text-1 5.5s ease-in-out infinite; animation-delay: 1.5s; }
+
+        .smooth-transition {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+  
+        
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-[#F9FBFA] overflow-x-hidden">
+
+    <!-- nav bar -->
+
+    <nav class="bg-[#0B2214] text-white sticky top-0 z-50 border-b border-white/5 shadow-lg px-4 md:px-12 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
+        
+        <!-- Logo Area -->
+        <a href="index.html" class="flex items-center gap-3 group cursor-pointer">
+            <div class="w-10 h-10 bg-gradient-to-br from-lawnGreen to-emerald-600 rounded-xl flex items-center justify-center text-white shadow-md shadow-lawnGreen/20 smooth-transition group-hover:scale-105">
+                <i class="fas fa-leaf text-lg"></i>
+            </div>
+            <div class="leading-tight">
+                <span class="text-lg font-extrabold tracking-wider block text-white">J&B</span>
+                <span class="text-[10px] text-lawnGreen font-semibold tracking-widest uppercase block -mt-1">LAWN SERVICES</span>
+            </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden lg:flex items-center gap-8 font-medium text-white/85 text-xs uppercase tracking-wider">
+            <a href="index.html" class="text-lawnGreen font-bold">Home</a>
+            <a href="about.html" class="hover:text-lawnGreen smooth-transition">About</a>
+            <a href="service.html" class="hover:text-lawnGreen smooth-transition">Services</a>
+            <a href="project.html" class="hover:text-lawnGreen smooth-transition">Project</a>
+            <a href="contact.html" class="hover:text-lawnGreen smooth-transition">Contact</a>
+        </div>
+
+        <!-- Right Side: Phone & Mobile Hamburger Toggle -->
+        <div class="flex items-center gap-4">
+            <a href="tel:9132779514" class="flex items-center gap-3 group cursor-pointer">
+                <div class="bg-lawnGreen text-white p-2.5 rounded-full hidden sm:flex items-center justify-center w-10 h-10 group-hover:animate-bounce">
+                    <i class="fas fa-phone-alt text-sm"></i>
+                </div>
+                <div class="text-right sm:text-left">
+                    <p class="text-[10px] text-white/50 font-medium uppercase tracking-wider">Call Now</p>
+                    <p class="text-sm md:text-base font-bold text-white group-hover:text-lawnGreen smooth-transition">913-277-9514</p>
+                </div>
+            </a>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" class="lg:hidden text-white focus:outline-none p-2 text-xl cursor-pointer">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden flex-col gap-4 mt-4 pt-4 border-t border-white/10 font-medium text-xs uppercase tracking-wider pb-2">
+        <a href="index.html" class="block py-2 text-lawnGreen font-bold">Home</a>
+        <a href="about.html" class="block py-2 hover:text-lawnGreen smooth-transition">About</a>
+        <a href="service.html" class="block py-2 hover:text-lawnGreen smooth-transition">Services</a>
+        <a href="project.html" class="block py-2 hover:text-lawnGreen smooth-transition">Project</a>
+        <a href="contact.html" class="block py-2 hover:text-lawnGreen smooth-transition">Contact</a>
+    </div>
+</nav>
+ <!-- PREMIUM HERO SECTION -->
+<header class="bg-lawnDarkGreen relative text-white pt-12 pb-40 px-4 md:px-12 overflow-hidden">
+    
+    <!-- Background Glow -->
+    <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-lawnGreen/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+        
+        <!-- Left Info Content -->
+        <div id="hero-left" class="lg:col-span-6 text-center md:text-left opacity-0 translate-y-8 transition-all duration-1000 ease-out">
+            <span class="bg-white/10 backdrop-blur-md text-lawnGreen text-xs font-semibold px-4 py-2 rounded-full inline-flex items-center gap-2 mb-6 border border-white/10">
+                <span class="w-2 h-2 rounded-full bg-lawnGreen animate-ping"></span> Hello, We Are J&B Lawn Services
+            </span>
+            
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-4">
+                Transforming <br>Your Yard Into <br><span class="text-lawnGreen">Green Paradise</span>
+            </h1>
+            <p class="text-white/60 font-medium text-sm md:text-lg mb-3 uppercase tracking-wider">
+                Professional Lawn & Commercial Care
+            </p>
+            <p class="text-white/40 max-w-xl text-sm md:text-base mb-8 leading-relaxed">
+                We design, build, and maintain clean, green outdoor environments. Turning your messy lawns into fast, reliable, beautiful products people enjoy looking at.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <button type="button" onclick="window.location.href='service.html'" class="bg-lawnGreen hover:bg-green-600 active:scale-95 text-white font-semibold px-6 py-3.5 rounded-full flex items-center justify-center gap-2 transition-all duration-300 shadow-lg group cursor-pointer">
+    View Our Work <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform duration-300"></i>
+</button>
+                <button type="button" onclick="window.location.href='contact.html'" class="border border-white/20 hover:bg-white/10 active:scale-95 text-white font-semibold px-6 py-3.5 rounded-full flex items-center justify-center gap-2 transition-all duration-300 group cursor-pointer">
+    Get Free Estimate <i class="fas fa-download text-xs transition-transform duration-300"></i>
+</button>
+            </div>
+
+            <!-- Social Handles -->
+            <div class="flex justify-center md:justify-start gap-3 mt-10">
+                <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-lawnGreen hover:border-lawnGreen transition-all duration-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-lawnGreen hover:border-lawnGreen transition-all duration-300"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-lawnGreen hover:border-lawnGreen transition-all duration-300"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-lawnGreen hover:border-lawnGreen transition-all duration-300"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <!-- Right Side Elements Layout Block (Delay kete deya hoyeche eksathe ashhar jonno) -->
+        <div id="hero-right" class="lg:col-span-6 flex justify-center items-center relative h-[500px] w-full max-w-xl mx-auto opacity-0 translate-y-8 transition-all duration-1000 ease-out">
+            
+            <!-- Premium Green Blob Background -->
+            <div class="absolute w-[280px] h-[380px] sm:w-[340px] sm:h-[440px] bg-gradient-to-br from-lawnGreen to-emerald-700 opacity-90 rounded-[40%_60%_70%_30%_/_40%_50%_60%_50%] shadow-[0_0_50px_rgba(92,184,92,0.25)] animate-[spin_35s_linear_infinite] pointer-events-none"></div>
+            <div class="absolute w-[300px] h-[400px] sm:w-[370px] sm:h-[470px] border border-white/10 rounded-[50%_40%_60%_40%_/_50%_60%_40%_60%] animate-[spin_25s_linear_infinite_reverse] pointer-events-none"></div>
+
+            <!-- POP-OUT TEAM IMAGES -->
+            <div class="relative w-[260px] h-[360px] sm:w-[320px] sm:h-[420px] z-10 flex items-center justify-center">
+                <div class="absolute w-[180px] h-[250px] sm:w-[220px] sm:h-[310px] rounded-3xl overflow-hidden shadow-2xl border-2 border-white/20 transform -translate-y-2 hover:scale-105 transition-all duration-500 z-20">
+                    <img src="images/preservation.webp" alt="Lawn Care Professional" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute w-[110px] h-[140px] sm:w-[130px] sm:h-[165px] rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 bottom-2 -left-4 sm:-left-8 z-30 transform -rotate-6 hover:rotate-0 transition-all duration-500">
+                    <img src="images/dry-wall.jpg" alt="Maintenance Expert" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute w-[100px] h-[130px] sm:w-[120px] sm:h-[155px] rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 top-2 -right-4 sm:-right-6 z-10 transform rotate-12 hover:rotate-0 transition-all duration-500">
+                    <img src="images/wall.jpg" alt="Lock Support" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- FLOATING TEXT BADGES -->
+            <div class="absolute top-6 left-0 sm:-left-4 bg-[#0B2214]/85 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full shadow-xl border border-lawnGreen/25 z-40 transition-all duration-700 hover:scale-105">
+                <span class="text-xs sm:text-sm font-medium tracking-wide whitespace-nowrap">🌱 Lawn Mowing</span>
+            </div>
+            <div class="absolute bottom-24 -left-6 sm:-left-12 bg-[#0B2214]/85 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full shadow-xl border border-lawnGreen/25 z-40 transition-all duration-700 hover:scale-105">
+                <span class="text-xs sm:text-sm font-medium tracking-wide whitespace-nowrap">🌿 Weed Control</span>
+            </div>
+            <div class="absolute top-16 -right-6 sm:-right-10 bg-[#0B2214]/85 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full shadow-xl border border-lawnGreen/25 z-40 transition-all duration-700 hover:scale-105">
+                <span class="text-xs sm:text-sm font-medium tracking-wide whitespace-nowrap">🏡 Landscaping Package</span>
+            </div>
+            <div class="absolute top-1/2 -translate-y-1/2 -right-8 sm:-right-14 bg-[#0B2214]/85 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full shadow-xl border border-lawnGreen/25 z-40 transition-all duration-700 hover:scale-105">
+                <span class="text-xs sm:text-sm font-medium tracking-wide whitespace-nowrap">🍂 Mulch Bed</span>
+            </div>
+            <div class="absolute bottom-12 -right-4 sm:-right-6 bg-[#0B2214]/85 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full shadow-xl border border-lawnGreen/25 z-40 transition-all duration-700 hover:scale-105">
+                <span class="text-xs sm:text-sm font-medium tracking-wide whitespace-nowrap">🛠️ Seasonal Maintenance</span>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const leftContent = document.getElementById("hero-left");
+        const rightContent = document.getElementById("hero-right");
+
+        // Duita element eksathe animate hobe
+        setTimeout(() => {
+            leftContent.classList.remove("opacity-0", "translate-y-8");
+            rightContent.classList.remove("opacity-0", "translate-y-8");
+        }, 50);
+    });
+</script>
+
+    <!-- FIXED 6-COLUMN PROFESSIONAL QUOTE FORM WITH TYPABLE SERVICE FIELD -->
+    <div class="relative z-30 max-w-6xl mx-auto px-4 -mt-20 md:-mt-24">
+    <div class="bg-white rounded-3xl shadow-[0_25px_55px_rgba(11,34,20,0.15)] p-6 md:p-8 border border-gray-200/70">
+        
+        <div class="flex items-center gap-3 mb-6">
+            <div class="w-9 h-9 rounded-full bg-[#EBF7ED] flex items-center justify-center text-lawnDarkGreen shadow-sm">
+                <i class="fas fa-file-invoice-dollar text-sm"></i>
+            </div>
+            <h3 class="text-md md:text-lg font-extrabold text-lawnDarkGreen tracking-wide uppercase">
+                Get A Free Lawn Care Quote
+            </h3>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" id="quote-form" class="grid grid-cols-1 md:grid-cols-3 gap-5 items-center">
+            
+            <input type="hidden" name="access_key" value="04ad0d1d-51a2-4dc8-92c0-a3a531277e6f">
+            
+            <input type="hidden" name="subject" value="New Lawn Care Quote Request from Website">
+            
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <div>
+                <input type="text" name="name" placeholder="Full Name" required
+                    class="w-full bg-[#FAFCFA] text-gray-900 placeholder-gray-500 font-medium text-sm px-5 py-4 rounded-xl border border-gray-300 focus:border-lawnGreen focus:bg-white focus:ring-2 focus:ring-lawnGreen/20 focus:outline-none smooth-transition shadow-sm">
+            </div>
+
+            <div>
+                <input type="email" name="email" placeholder="Email Address" required
+                    class="w-full bg-[#FAFCFA] text-gray-900 placeholder-gray-500 font-medium text-sm px-5 py-4 rounded-xl border border-gray-300 focus:border-lawnGreen focus:bg-white focus:ring-2 focus:ring-lawnGreen/20 focus:outline-none smooth-transition shadow-sm">
+            </div>
+
+            <div>
+                <input type="tel" name="phone" placeholder="Phone Number" 
+                    class="w-full bg-[#FAFCFA] text-gray-900 placeholder-gray-500 font-medium text-sm px-5 py-4 rounded-xl border border-gray-300 focus:border-lawnGreen focus:bg-white focus:ring-2 focus:ring-lawnGreen/20 focus:outline-none smooth-transition shadow-sm">
+            </div>
+
+            <div>
+                <input type="text" name="service" placeholder="Service Type" 
+                    class="w-full bg-[#FAFCFA] text-gray-900 placeholder-gray-500 font-medium text-sm px-5 py-4 rounded-xl border border-gray-300 focus:border-lawnGreen focus:bg-white focus:ring-2 focus:ring-lawnGreen/20 focus:outline-none smooth-transition shadow-sm">
+            </div>
+
+            <div>
+                <input type="text" name="message" placeholder="Your Message" 
+                    class="w-full bg-[#FAFCFA] text-gray-900 placeholder-gray-500 font-medium text-sm px-5 py-4 rounded-xl border border-gray-300 focus:border-lawnGreen focus:bg-white focus:ring-2 focus:ring-lawnGreen/20 focus:outline-none smooth-transition shadow-sm">
+            </div>
+
+            <div>
+                <button type="submit" id="submit-btn"
+                    class="w-full bg-lawnGreen hover:bg-green-600 active:scale-[0.98] text-white text-xs md:text-sm font-bold uppercase tracking-wider py-4 rounded-xl flex items-center justify-center gap-2 shadow-md shadow-lawnGreen/30 smooth-transition cursor-pointer">
+                    Get Free Quote <i class="fas fa-arrow-right text-xs"></i>
+                </button>
+            </div>
+
+        </form>
+
+        <div id="form-result" class="mt-4 text-center text-sm font-semibold"></div>
+
+    </div>
+</div>
+
+<script>
+    const form = document.getElementById('quote-form');
+    const result = document.getElementById('form-result');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+        
+        result.innerHTML = "Sending...";
+        result.className = "mt-4 text-center text-sm font-semibold text-gray-500";
+        submitBtn.disabled = true;
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let jsonResponse = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = "Success! Your quote request has been sent.";
+                result.className = "mt-4 text-center text-sm font-semibold text-green-600";
+                form.reset();
+            } else {
+                result.innerHTML = jsonResponse.message;
+                result.className = "mt-4 text-center text-sm font-semibold text-red-500";
+            }
+        })
+        .catch(error => {
+            result.innerHTML = "Something went wrong! Please try again later.";
+            result.className = "mt-4 text-center text-sm font-semibold text-red-500";
+        })
+        .then(() => {
+            submitBtn.disabled = false;
+            setTimeout(() => {
+                result.innerHTML = "";
+            }, 5000);
+        });
+    });
+</script>
+   
+
+
+    <!-- ................................................................................... -->
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <section id="about" class="max-w-[1400px] mx-auto px-4 py-24 md:py-32 overflow-hidden bg-[#FAFCFA] relative select-none">
+        
+        <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-9 gap-4 items-start max-w-7xl mx-auto relative min-h-[600px] md:min-h-[720px]">
+            
+            <div class="space-y-4 transform translate-y-16">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50 relative hidden lg:block">
+                    <img src="images/about-15.jpg" alt="Background Fade Team" loading="lazy" class="w-full h-full object-cover [mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] opacity-70">
+                </div>
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50">
+                    <img src="images/about-1.jpg" alt="Team" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50">
+                    <img src="images/about-2.jpg" alt="Team" loading="lazy" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="space-y-4 transform -translate-y-4 hidden sm:block">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50 relative hidden md:block">
+                    <img src="images/about-16.jpg" alt="Background Fade Team" loading="lazy" class="w-full h-full object-cover [mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] opacity-70">
+                </div>
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50">
+                    <img src="images/about-3.jpg" alt="Team" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50">
+                    <img src="images/about-4.jpg" alt="Team" loading="lazy" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="space-y-4 transform translate-y-8">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50 relative">
+                    <img src="images/about-17.jpg" alt="Background Fade Team" loading="lazy" class="w-full h-full object-cover [mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] opacity-70">
+                </div>
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50">
+                    <img src="images/about-5.jpg" alt="Team" loading="lazy" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="space-y-4 transform -translate-y-2 hidden md:block">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50 relative">
+                    <img src="images/about-23.jpg" alt="Background Fe Team" loading="lazy" class="w-full h-full object-cover [mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] opacity-70">
+                </div>
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50">
+                    <img src="images/about-6.jpg" alt="Team" loading="lazy" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="space-y-4 transform translate-y-4 hidden lg:block">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50 relative">
+                    <img src="images/about-18.jpg" alt="Background Fade Team" loading="lazy" class="w-full h-full object-cover [mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] opacity-70">
+                </div>
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50">
+                    <img src="images/about-7.jpg" alt="Team" loading="lazy" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="space-y-4 transform -translate-y-4 hidden md:block">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50 relative">
+                    <img src="images/about-19.jpg" alt="Background Fade Team" loading="lazy" class="w-full h-full object-cover [mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] opacity-70">
+                </div>
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50">
+                    <img src="images/about-8.jpg" alt="Team" loading="lazy" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="space-y-4 transform translate-y-10">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50 relative">
+                    <img src="images/about-20.jpg" alt="Background Fade Team" loading="lazy" class="w-full h-full object-cover [mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] opacity-70">
+                </div>
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50">
+                    <img src="images/about-9.jpg" alt="Team" loading="lazy" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="space-y-4 transform -translate-y-2">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50 relative hidden md:block">
+                    <img src="images/about-21.jpg" alt="Background Fade Team" loading="lazy" class="w-full h-full object-cover [mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] opacity-70">
+                </div>
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50">
+                    <img src="images/about-10.jpg" alt="Team" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50">
+                    <img src="images/about-11.jpg" alt="Team" loading="lazy" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="space-y-4 transform translate-y-14 hidden lg:block">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50 relative">
+                    <img src="images/about-22.jpg" alt="Background Fade Team" loading="lazy" class="w-full h-full object-cover [mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_80%)] opacity-70">
+                </div>
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50">
+                    <img src="images/about-12.jpg" alt="Team" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50">
+                    <img src="images/about-13.jpg" alt="Team" loading="lazy" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="absolute inset-x-0 bottom-0 top-[320px] md:top-[360px] flex flex-col items-center justify-end text-center px-4 max-w-2xl mx-auto z-20 pointer-events-auto pb-4">
+                <span class="text-lawnGreen font-bold text-xs uppercase tracking-widest block bg-lawnGreen/10 px-4 py-1.5 rounded-full w-max mx-auto border border-lawnGreen/20 mb-4">
+                    Who We Are
+                </span>
+                
+                <h2 class="text-3xl md:text-[44px] font-black text-lawnDarkGreen tracking-tight leading-[1.1] mb-4">
+                    Your Trusted Partner for <br> <span class="text-lawnGreen">Reliable Solutions</span>
+                </h2>
+                
+                <p class="text-gray-500 text-xs md:text-sm max-w-xl mx-auto leading-relaxed font-semibold mb-6">
+                    Learn why professionals trust our solutions to complete their customer journeys.
+                </p>
+
+                <button type="button" onclick="window.location.href='about.html'" class="bg-lawnDarkGreen hover:bg-lawnGreen active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-7 py-4 rounded-full flex items-center gap-2 smooth-transition shadow-lg shadow-lawnDarkGreen/10 group cursor-pointer">
+                    Read Success Stories <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 smooth-transition"></i>
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- eta extra sectionnnnn  -->
+
+
+   <!-- 3D PERFECT POP-OUT CTA SECTION -->
+    <section class="max-w-[1400px] mx-auto px-4 py-20 relative select-none">
+        
+        <!-- COMPACT CONTAINER WITH VISIBLE OVERFLOW -->
+        <div class="max-w-5xl mx-auto bg-gradient-to-r from-lawnDarkGreen via-[#12381f] to-lawnGreen rounded-[36px] px-6 sm:px-12 py-10 md:py-12 relative overflow-visible shadow-2xl shadow-lawnDarkGreen/20 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
+            
+            <!-- LARGE 3D POP-OUT IMAGE (Bottom aligned to container, head breaks way out on top) -->
+            <div class="w-80 sm:w-96 md:w-[500px] flex-shrink-0 relative self-end md:self-auto -mb-10 md:-mb-12 -mt-36 sm:-mt-40 md:-mt-48 md:-ml-16 lg:-ml-20 z-30 pointer-events-none">
+                <img loading="lazy" src="images/help-22.png" alt="Professional Helper" class="w-full h-auto object-contain drop-shadow-[0_30px_35px_rgba(0,0,0,0.55)]">
+            </div>
+
+            <!-- CONTENT AREA (Expert Assistance moved to top) -->
+            <div class="flex-grow text-center md:text-left space-y-4 z-20 max-w-xl">
+                <!-- Small Tag positioned cleanly at the top -->
+                <div class="flex justify-center md:justify-start">
+                    <span class="bg-white/10 text-lawnGreen font-bold text-[11px] uppercase tracking-widest px-3.5 py-1.5 rounded-full border border-white/10 inline-block shadow-sm">
+                        Expert Assistance
+                    </span>
+                </div>
+                
+                <!-- Main Heading -->
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight leading-tight">
+                    Having a problem? <br> <span class="text-lawnGreen">We’ll fix it today!</span>
+                </h2>
+                
+                <!-- Subtext description -->
+                <p class="text-gray-300 text-xs md:text-sm font-medium leading-relaxed">
+                    Our certified landscape and yard specialists are ready to provide fast, reliable solutions for your property right now.
+                </p>
+
+                <!-- Phone & Quote Action Group -->
+                <div class="pt-2 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 sm:gap-6">
+                    <!-- Phone Link -->
+                    <a href="tel:2342312123" class="flex items-center gap-3 text-white font-extrabold text-sm sm:text-base hover:text-lawnGreen transition-colors group">
+                        <div class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-lawnGreen group-hover:scale-105 transition-transform">
+                            <i class="fas fa-phone-alt text-xs"></i>
+                        </div>
+                        <span>(234) 231 - 2123</span>
+                    </a>
+
+                    <span class="text-gray-400 text-xs font-semibold uppercase hidden sm:inline">Or</span>
+
+                    <!-- Action Button -->
+                   <button type="button" onclick="window.location.href='contact.html'" class="bg-white hover:bg-lawnGreen active:scale-95 text-lawnDarkGreen hover:text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-full shadow-lg transition-all duration-300 cursor-pointer">
+    Get a quote
+</button>
+                </div>
+            </div>
+
+            <!-- BACKGROUND DECORATIVE GLOW -->
+            <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-lawnGreen/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- eta service sectionnnnn  -->
+
+
+    <section id="services" class="max-w-[1400px] mx-auto px-4 py-20 md:py-28 bg-[#FAFCFA] relative select-none overflow-hidden">
+        
+    <div class="text-center max-w-3xl mx-auto space-y-4 mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-black text-lawnDarkGreen tracking-tight">
+            Our Services
+        </h2>
+        <p class="text-gray-500 text-xs md:text-sm max-w-xl mx-auto leading-relaxed font-semibold">
+            Explore our compact, top-tier yard solutions tailored to your needs.
+        </p>
+    </div>
+
+    <div class="max-w-7xl mx-auto overflow-hidden relative px-2 py-4 group">
+        
+        <div class="marquee-track flex gap-6 w-max">
+            
+            <!-- ORIGINAL 6 CARDS -->
+            <div class="w-[280px] sm:w-[300px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group/card flex-shrink-0 relative">
+                <div class="aspect-[16/10] w-full bg-gray-100 overflow-hidden relative">
+                    <img loading="lazy" src="images/Property Maintanance.jpg" alt="Service" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-300">
+                </div>
+                <div class="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center border border-gray-50 z-20">
+                    <div class="w-9 h-9 rounded-full bg-[#FAFCFA] border border-lawnGreen/30 flex items-center justify-center text-lawnGreen text-sm">
+                        <i class="fas fa-faucet"></i>
+                    </div>
+                </div>
+                <div class="pt-9 pb-6 px-5 flex flex-col flex-grow text-center space-y-2">
+                    <h3 class="text-base font-black text-lawnDarkGreen group-hover/card:text-lawnGreen transition-colors mt-1">
+                        Faucet & leak repairs
+                    </h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-medium flex-grow">
+                        Intuitive and innovative solutions for flawless outdoor water setups.
+                    </p>
+                    <a href="service.html" class="text-lawnGreen font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 pt-1 hover:text-lawnDarkGreen transition-colors">
+                        View Service <i class="fas fa-chevron-right text-[8px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-[280px] sm:w-[300px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group/card flex-shrink-0 relative">
+                <div class="aspect-[16/10] w-full bg-gray-100 overflow-hidden relative">
+                    <img loading="lazy" src="images/tree trimming.jpg" alt="Service" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-300">
+                </div>
+                <div class="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center border border-gray-50 z-20">
+                    <div class="w-9 h-9 rounded-full bg-[#FAFCFA] border border-lawnGreen/30 flex items-center justify-center text-lawnGreen text-sm">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                </div>
+                <div class="pt-9 pb-6 px-5 flex flex-col flex-grow text-center space-y-2">
+                    <h3 class="text-base font-black text-lawnDarkGreen group-hover/card:text-lawnGreen transition-colors mt-1">
+                        Remodeling service
+                    </h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-medium flex-grow">
+                        Transforming your landscape structure with expert remodeling.
+                    </p>
+                    <a href="service.html" class="text-lawnGreen font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 pt-1 hover:text-lawnDarkGreen transition-colors">
+                        View Service <i class="fas fa-chevron-right text-[8px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-[280px] sm:w-[300px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group/card flex-shrink-0 relative">
+                <div class="aspect-[16/10] w-full bg-gray-100 overflow-hidden relative">
+                    <img loading="lazy" src="images/presser cleaning.jpg" alt="Service" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-300">
+                </div>
+                <div class="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center border border-gray-50 z-20">
+                    <div class="w-9 h-9 rounded-full bg-[#FAFCFA] border border-lawnGreen/30 flex items-center justify-center text-lawnGreen text-sm">
+                        <i class="fas fa-shower"></i>
+                    </div>
+                </div>
+                <div class="pt-9 pb-6 px-5 flex flex-col flex-grow text-center space-y-2">
+                    <h3 class="text-base font-black text-lawnDarkGreen group-hover/card:text-lawnGreen transition-colors mt-1">
+                        Drain cleaning
+                    </h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-medium flex-grow">
+                        Keeping your yard clean and clear with advanced drainage care.
+                    </p>
+                    <a href="service.html" class="text-lawnGreen font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 pt-1 hover:text-lawnDarkGreen transition-colors">
+                        View Service <i class="fas fa-chevron-right text-[8px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-[280px] sm:w-[300px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group/card flex-shrink-0 relative">
+                <div class="aspect-[16/10] w-full bg-gray-100 overflow-hidden relative">
+                    <img loading="lazy" src="images/handyman 2.jpg" alt="Service" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-300">
+                </div>
+                <div class="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center border border-gray-50 z-20">
+                    <div class="w-9 h-9 rounded-full bg-[#FAFCFA] border border-lawnGreen/30 flex items-center justify-center text-lawnGreen text-sm">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                </div>
+                <div class="pt-9 pb-6 px-5 flex flex-col flex-grow text-center space-y-2">
+                    <h3 class="text-base font-black text-lawnDarkGreen group-hover/card:text-lawnGreen transition-colors mt-1">
+                        Sewer repair
+                    </h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-medium flex-grow">
+                        Reliable fixes to maintain pristine and healthy green areas.
+                    </p>
+                    <a href="service.html" class="text-lawnGreen font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 pt-1 hover:text-lawnDarkGreen transition-colors">
+                        View Service <i class="fas fa-chevron-right text-[8px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-[280px] sm:w-[300px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group/card flex-shrink-0 relative">
+                <div class="aspect-[16/10] w-full bg-gray-100 overflow-hidden relative">
+                    <img loading="lazy" src="images/cleaning 2.jpg" alt="Service" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-300">
+                </div>
+                <div class="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center border border-gray-50 z-20">
+                    <div class="w-9 h-9 rounded-full bg-[#FAFCFA] border border-lawnGreen/30 flex items-center justify-center text-lawnGreen text-sm">
+                        <i class="fas fa-faucet"></i>
+                    </div>
+                </div>
+                <div class="pt-9 pb-6 px-5 flex flex-col flex-grow text-center space-y-2">
+                    <h3 class="text-base font-black text-lawnDarkGreen group-hover/card:text-lawnGreen transition-colors mt-1">
+                        Faucet & leak repairs
+                    </h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-medium flex-grow">
+                        Intuitive and innovative solutions for flawless outdoor water setups.
+                    </p>
+                    <a href="service.html" class="text-lawnGreen font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 pt-1 hover:text-lawnDarkGreen transition-colors">
+                        View Service <i class="fas fa-chevron-right text-[8px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-[280px] sm:w-[300px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group/card flex-shrink-0 relative">
+                <div class="aspect-[16/10] w-full bg-gray-100 overflow-hidden relative">
+                    <img loading="lazy" src="images/lawn.jpg" alt="Service" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-300">
+                </div>
+                <div class="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center border border-gray-50 z-20">
+                    <div class="w-9 h-9 rounded-full bg-[#FAFCFA] border border-lawnGreen/30 flex items-center justify-center text-lawnGreen text-sm">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                </div>
+                <div class="pt-9 pb-6 px-5 flex flex-col flex-grow text-center space-y-2">
+                    <h3 class="text-base font-black text-lawnDarkGreen group-hover/card:text-lawnGreen transition-colors mt-1">
+                        Remodeling service
+                    </h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-medium flex-grow">
+                        Transforming your landscape structure with expert remodeling.
+                    </p>
+                    <a href="service.html" class="text-lawnGreen font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 pt-1 hover:text-lawnDarkGreen transition-colors">
+                        View Service <i class="fas fa-chevron-right text-[8px]"></i>
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- DUPLICATE OF THE EXACT 6 CARDS FOR SEAMLESS LOOPING -->
+            <div class="w-[280px] sm:w-[300px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group/card flex-shrink-0 relative">
+                <div class="aspect-[16/10] w-full bg-gray-100 overflow-hidden relative">
+                    <img loading="lazy" src="images/Property Maintanance.jpg" alt="Service" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-300">
+                </div>
+                <div class="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center border border-gray-50 z-20">
+                    <div class="w-9 h-9 rounded-full bg-[#FAFCFA] border border-lawnGreen/30 flex items-center justify-center text-lawnGreen text-sm">
+                        <i class="fas fa-faucet"></i>
+                    </div>
+                </div>
+                <div class="pt-9 pb-6 px-5 flex flex-col flex-grow text-center space-y-2">
+                    <h3 class="text-base font-black text-lawnDarkGreen group-hover/card:text-lawnGreen transition-colors mt-1">
+                        Faucet & leak repairs
+                    </h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-medium flex-grow">
+                        Intuitive and innovative solutions for flawless outdoor water setups.
+                    </p>
+                    <a href="service.html" class="text-lawnGreen font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 pt-1 hover:text-lawnDarkGreen transition-colors">
+                        View Service <i class="fas fa-chevron-right text-[8px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-[280px] sm:w-[300px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group/card flex-shrink-0 relative">
+                <div class="aspect-[16/10] w-full bg-gray-100 overflow-hidden relative">
+                    <img loading="lazy" src="images/tree trimming.jpg" alt="Service" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-300">
+                </div>
+                <div class="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center border border-gray-50 z-20">
+                    <div class="w-9 h-9 rounded-full bg-[#FAFCFA] border border-lawnGreen/30 flex items-center justify-center text-lawnGreen text-sm">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                </div>
+                <div class="pt-9 pb-6 px-5 flex flex-col flex-grow text-center space-y-2">
+                    <h3 class="text-base font-black text-lawnDarkGreen group-hover/card:text-lawnGreen transition-colors mt-1">
+                        Remodeling service
+                    </h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-medium flex-grow">
+                        Transforming your landscape structure with expert remodeling.
+                    </p>
+                    <a href="service.html" class="text-lawnGreen font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 pt-1 hover:text-lawnDarkGreen transition-colors">
+                        View Service <i class="fas fa-chevron-right text-[8px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-[280px] sm:w-[300px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group/card flex-shrink-0 relative">
+                <div class="aspect-[16/10] w-full bg-gray-100 overflow-hidden relative">
+                    <img loading="lazy" src="images/presser cleaning.jpg" alt="Service" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-300">
+                </div>
+                <div class="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center border border-gray-50 z-20">
+                    <div class="w-9 h-9 rounded-full bg-[#FAFCFA] border border-lawnGreen/30 flex items-center justify-center text-lawnGreen text-sm">
+                        <i class="fas fa-shower"></i>
+                    </div>
+                </div>
+                <div class="pt-9 pb-6 px-5 flex flex-col flex-grow text-center space-y-2">
+                    <h3 class="text-base font-black text-lawnDarkGreen group-hover/card:text-lawnGreen transition-colors mt-1">
+                        Drain cleaning
+                    </h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-medium flex-grow">
+                        Keeping your yard clean and clear with advanced drainage care.
+                    </p>
+                    <a href="service.html" class="text-lawnGreen font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 pt-1 hover:text-lawnDarkGreen transition-colors">
+                        View Service <i class="fas fa-chevron-right text-[8px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-[280px] sm:w-[300px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group/card flex-shrink-0 relative">
+                <div class="aspect-[16/10] w-full bg-gray-100 overflow-hidden relative">
+                    <img loading="lazy" src="images/handyman 2.jpg" alt="Service" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-300">
+                </div>
+                <div class="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center border border-gray-50 z-20">
+                    <div class="w-9 h-9 rounded-full bg-[#FAFCFA] border border-lawnGreen/30 flex items-center justify-center text-lawnGreen text-sm">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                </div>
+                <div class="pt-9 pb-6 px-5 flex flex-col flex-grow text-center space-y-2">
+                    <h3 class="text-base font-black text-lawnDarkGreen group-hover/card:text-lawnGreen transition-colors mt-1">
+                        Sewer repair
+                    </h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-medium flex-grow">
+                        Reliable fixes to maintain pristine and healthy green areas.
+                    </p>
+                    <a href="service.html" class="text-lawnGreen font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 pt-1 hover:text-lawnDarkGreen transition-colors">
+                        View Service <i class="fas fa-chevron-right text-[8px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-[280px] sm:w-[300px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group/card flex-shrink-0 relative">
+                <div class="aspect-[16/10] w-full bg-gray-100 overflow-hidden relative">
+                    <img loading="lazy" src="images/cleaning 2.jpg" alt="Service" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-300">
+                </div>
+                <div class="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center border border-gray-50 z-20">
+                    <div class="w-9 h-9 rounded-full bg-[#FAFCFA] border border-lawnGreen/30 flex items-center justify-center text-lawnGreen text-sm">
+                        <i class="fas fa-faucet"></i>
+                    </div>
+                </div>
+                <div class="pt-9 pb-6 px-5 flex flex-col flex-grow text-center space-y-2">
+                    <h3 class="text-base font-black text-lawnDarkGreen group-hover/card:text-lawnGreen transition-colors mt-1">
+                        Faucet & leak repairs
+                    </h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-medium flex-grow">
+                        Intuitive and innovative solutions for flawless outdoor water setups.
+                    </p>
+                    <a href="service.html" class="text-lawnGreen font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 pt-1 hover:text-lawnDarkGreen transition-colors">
+                        View Service <i class="fas fa-chevron-right text-[8px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-[280px] sm:w-[300px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group/card flex-shrink-0 relative">
+                <div class="aspect-[16/10] w-full bg-gray-100 overflow-hidden relative">
+                    <img loading="lazy" src="images/lawn.jpg" alt="Service" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-300">
+                </div>
+                <div class="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center border border-gray-50 z-20">
+                    <div class="w-9 h-9 rounded-full bg-[#FAFCFA] border border-lawnGreen/30 flex items-center justify-center text-lawnGreen text-sm">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                </div>
+                <div class="pt-9 pb-6 px-5 flex flex-col flex-grow text-center space-y-2">
+                    <h3 class="text-base font-black text-lawnDarkGreen group-hover/card:text-lawnGreen transition-colors mt-1">
+                        Remodeling service
+                    </h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-medium flex-grow">
+                        Transforming your landscape structure with expert remodeling.
+                    </p>
+                    <a href="service.html" class="text-lawnGreen font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 pt-1 hover:text-lawnDarkGreen transition-colors">
+                        View Service <i class="fas fa-chevron-right text-[8px]"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <style>
+        @keyframes smoothScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-track {
+            animation: smoothScroll 25s linear infinite;
+        }
+        .group:hover .marquee-track {
+            animation-play-state: paused;
+        }
+    </style>
+</section>
+
+
+    <!-- how it works -->
+
+   <!-- HOW IT WORKS / STEP-BY-STEP SECTION WITH PC VIDEO & THEME BACKGROUND -->
+    <section class="w-full bg-lawnDarkGreen py-14 md:py-20 relative select-none overflow-hidden">
+        
+        <!-- MAIN CONTAINER -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <!-- LEFT COLUMN (Compact Header, Description, Button & Video) -->
+            <div class="lg:col-span-6 space-y-5 flex flex-col text-left">
+                
+                <!-- TOP BADGE -->
+                <div>
+                    <span class="bg-lawnGreen/20 text-lawnGreen font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full border border-lawnGreen/30 inline-flex items-center gap-1.5">
+                        <i class="fas fa-seedling text-[8px]"></i> How It Works
+                    </span>
+                </div>
+                
+                <!-- MAIN HEADING -->
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight leading-snug">
+                    Step-by-step lawn care <br> with <span class="text-lawnGreen">J&B Lawn Services</span>
+                </h2>
+                
+                <!-- DESCRIPTION -->
+                <p class="text-gray-300 text-xs font-medium leading-relaxed max-w-md">
+                    Our process is designed to keep your lawn healthy, clean, and beautifully maintained with minimal effort on your part.
+                </p>
+
+                <!-- CALL TO ACTION BUTTON -->
+                <div>
+                    <a href="contact.html" class="bg-lawnGreen hover:bg-white text-lawnDarkGreen font-bold text-[11px] uppercase tracking-wider px-5 py-2.5 rounded-full shadow-md inline-flex items-center gap-2 transition-all duration-300">
+                        Start your lawn care <i class="fas fa-arrow-right text-[8px]"></i>
+                    </a>
+                </div>
+
+                <!-- VIDEO CONTAINER -->
+                <div class="w-full aspect-[16/9] bg-black/20 rounded-2xl overflow-hidden shadow-md border border-white/10 relative group mt-2">
+                    <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
+                        <source data-src="Vedio/vid-2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+            </div>
+
+         <!-- RIGHT COLUMN (Timeline with Thin Line Only, No Dots) -->
+            <div class="lg:col-span-6 relative pl-6 sm:pl-12">
+                
+                <!-- THIN TIMELINE LINE (w-0.5 = 2px width, positioned at left-3 = 12px) -->
+                <div class="absolute left-3 top-3 bottom-3 w-0.5 bg-lawnGreen/60 rounded-full"></div>
+
+                <div class="space-y-10 relative z-10">
+                    
+                    <!-- STEP 01 -->
+                    <div class="flex items-start gap-5 sm:gap-7 group relative">
+                        <div class="space-y-2 flex-grow">
+                            <span class="bg-lawnGreen text-white font-extrabold text-[10px] uppercase tracking-wider px-3 py-1 rounded-md inline-block shadow-sm">
+                                STEP 01
+                            </span>
+                            <h3 class="text-base sm:text-lg font-black text-white tracking-tight uppercase">
+                                Request a free estimate
+                            </h3>
+                            <p class="text-gray-200 text-xs sm:text-sm font-medium leading-relaxed max-w-md">
+                                Simply contact us to share the details of your lawn and the services you require for a free estimate.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 02 -->
+                    <div class="flex items-start gap-5 sm:gap-7 group relative">
+                        <div class="space-y-2 flex-grow">
+                            <span class="bg-lawnGreen/20 text-gray-200 font-extrabold text-[10px] uppercase tracking-wider px-3 py-1 rounded-md inline-block border border-lawnGreen/30">
+                                STEP 02
+                            </span>
+                            <h3 class="text-base sm:text-lg font-black text-white tracking-tight uppercase">
+                                Schedule your service
+                            </h3>
+                            <p class="text-gray-200 text-xs sm:text-sm font-medium leading-relaxed max-w-md">
+                                Choose a convenient date and time for our professional team to visit your property.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 03 -->
+                    <div class="flex items-start gap-5 sm:gap-7 group relative">
+                        <div class="space-y-2 flex-grow">
+                            <span class="bg-lawnGreen/20 text-gray-200 font-extrabold text-[10px] uppercase tracking-wider px-3 py-1 rounded-md inline-block border border-lawnGreen/30">
+                                STEP 03
+                            </span>
+                            <h3 class="text-base sm:text-lg font-black text-white tracking-tight uppercase">
+                                Enjoy a beautiful lawn
+                            </h3>
+                            <p class="text-gray-200 text-xs sm:text-sm font-medium leading-relaxed max-w-md">
+                                We perform expert lawn care, including mowing, edging, trimming, and seasonal maintenance.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+<!-- START: OUR PROJECT GALLERY SECTION -->
+
+
+
+
+
+
+
+
+
+
+<section class="w-full bg-white py-16 md:py-24 relative select-none overflow-hidden">
+    
+    <!-- MAIN CONTAINER -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        
+        <!-- SECTION HEADER -->
+        <div class="text-center space-y-4">
+            <!-- Top Badge -->
+            <div>
+                <span class="bg-gray-100 text-gray-800 font-bold text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full border border-gray-200 inline-flex items-center gap-2">
+                    <i class="fas fa-video text-[9px]"></i> Our Project Gallery
+                </span>
+            </div>
+            
+            <!-- Main Heading -->
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight leading-tight uppercase">
+                Our portfolio of excellence <br>
+                <span class="text-green-600">Creatives outdoor designs</span>
+            </h2>
+        </div>
+
+        <!-- GALLERY GRID LAYOUT -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            
+            <!-- LEFT TALL VIDEO -->
+            <div class="lg:col-span-4 w-full h-full min-h-[500px] lg:min-h-[580px] bg-gray-100 rounded-3xl overflow-hidden shadow-md border border-gray-200 group relative">
+                <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <source data-src="Vedio/v1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- RIGHT GRID AREA -->
+            <div class="lg:col-span-8 flex flex-col gap-6 justify-between h-full">
+                
+                <!-- TOP 2 VIDEOS -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 flex-grow">
+                    <!-- Video 1 -->
+                    <div class="w-full h-full min-h-[220px] bg-gray-100 rounded-2xl overflow-hidden shadow-md border border-gray-200 group relative">
+                        <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <source data-src="Vedio/v2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <!-- Video 2 -->
+                    <div class="w-full h-full min-h-[220px] bg-gray-100 rounded-2xl overflow-hidden shadow-md border border-gray-200 group relative">
+                        <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <source data-src="Vedio/v3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <!-- BOTTOM 3 VIDEOS -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 flex-grow">
+                    <!-- Video 3 -->
+                    <div class="w-full h-full min-h-[190px] bg-gray-100 rounded-2xl overflow-hidden shadow-md border border-gray-200 group relative">
+                        <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <source data-src="Vedio/v5.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <!-- Video 4 -->
+                    <div class="w-full h-full min-h-[190px] bg-gray-100 rounded-2xl overflow-hidden shadow-md border border-gray-200 group relative">
+                        <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <source data-src="Vedio/v4.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <!-- Video 5 -->
+                    <div class="w-full h-full min-h-[190px] bg-gray-100 rounded-2xl overflow-hidden shadow-md border border-gray-200 group relative">
+                        <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <source data-src="Vedio/v6.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- END: OUR PROJECT GALLERY SECTION -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="w-full bg-lawnDarkGreen py-12 md:py-16 relative select-none overflow-hidden" id="seamless-infinite-section">
+    
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        
+        <div class="space-y-2 text-center">
+            <div>
+                <span class="bg-lawnGreen/25 text-lawnGreen font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full border border-lawnGreen/30 inline-flex items-center gap-1.5">
+                    <i class="fas fa-sliders-h text-[8px]"></i> Before And After
+                </span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight uppercase">
+                See the difference we make
+            </h2>
+        </div>
+
+        <div class="relative overflow-hidden w-full py-2">
+            <div class="flex transition-transform duration-700 ease-in-out gap-6" id="carousel-track">
+                
+                <div class="relative w-[calc(50%-12px)] min-w-[calc(50%-12px)] flex-shrink-0 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-white/10 group select-none cursor-ew-resize bg-black/40 comparison-container" data-index="0">
+                    <img loading="lazy" src="images/after-1.png" alt="After Service" class="absolute inset-0 w-full h-full object-cover pointer-events-none after-img">
+                    <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none before-wrapper" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                        <img loading="lazy" src="images/before-1.png" alt="Before Service" class="absolute inset-0 w-full h-full object-cover pointer-events-none before-img">
+                    </div>
+                    <div class="absolute top-0 bottom-0 w-1 bg-white z-30 slider-handle" style="left: 50%;">
+                        <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-lawnDarkGreen border-2 border-white text-white flex items-center justify-between px-1 shadow-md">
+                            <i class="fas fa-chevron-left text-[8px]"></i>
+                            <i class="fas fa-chevron-right text-[8px]"></i>
+                        </div>
+                    </div>
+                    <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded z-20 pointer-events-none">Before</span>
+                    <span class="absolute top-3 right-3 bg-lawnGreen/80 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded z-20 pointer-events-none">After</span>
+                </div>
+
+                <div class="relative w-[calc(50%-12px)] min-w-[calc(50%-12px)] flex-shrink-0 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-white/10 group select-none cursor-ew-resize bg-black/40 comparison-container" data-index="1">
+                    <img loading="lazy" src="images/after-2.png" alt="After Service" class="absolute inset-0 w-full h-full object-cover pointer-events-none after-img">
+                    <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none before-wrapper" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                        <img loading="lazy" src="images/before-2.png" alt="Before Service" class="absolute inset-0 w-full h-full object-cover pointer-events-none before-img">
+                    </div>
+                    <div class="absolute top-0 bottom-0 w-1 bg-white z-30 slider-handle" style="left: 50%;">
+                        <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-lawnDarkGreen border-2 border-white text-white flex items-center justify-between px-1 shadow-md">
+                            <i class="fas fa-chevron-left text-[8px]"></i>
+                            <i class="fas fa-chevron-right text-[8px]"></i>
+                        </div>
+                    </div>
+                    <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded z-20 pointer-events-none">Before</span>
+                    <span class="absolute top-3 right-3 bg-lawnGreen/80 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded z-20 pointer-events-none">After</span>
+                </div>
+
+                <div class="relative w-[calc(50%-12px)] min-w-[calc(50%-12px)] flex-shrink-0 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-white/10 group select-none cursor-ew-resize bg-black/40 comparison-container" data-index="2">
+                    <img loading="lazy" src="images/after-8.png" alt="After Service" class="absolute inset-0 w-full h-full object-cover pointer-events-none after-img">
+                    <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none before-wrapper" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                        <img loading="lazy" src="images/before-8.png" alt="Before Service" class="absolute inset-0 w-full h-full object-cover pointer-events-none before-img">
+                    </div>
+                    <div class="absolute top-0 bottom-0 w-1 bg-white z-30 slider-handle" style="left: 50%;">
+                        <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-lawnDarkGreen border-2 border-white text-white flex items-center justify-between px-1 shadow-md">
+                            <i class="fas fa-chevron-left text-[8px]"></i>
+                            <i class="fas fa-chevron-right text-[8px]"></i>
+                        </div>
+                    </div>
+                    <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded z-20 pointer-events-none">Before</span>
+                    <span class="absolute top-3 right-3 bg-lawnGreen/80 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded z-20 pointer-events-none">After</span>
+                </div>
+
+                <div class="relative w-[calc(50%-12px)] min-w-[calc(50%-12px)] flex-shrink-0 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-white/10 group select-none cursor-ew-resize bg-black/40 comparison-container" data-index="3">
+                    <img loading="lazy" src="images/after-4.png" alt="After Service" class="absolute inset-0 w-full h-full object-cover pointer-events-none after-img">
+                    <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none before-wrapper" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                        <img loading="lazy" src="images/before-4.png" alt="Before Service" class="absolute inset-0 w-full h-full object-cover pointer-events-none before-img">
+                    </div>
+                    <div class="absolute top-0 bottom-0 w-1 bg-white z-30 slider-handle" style="left: 50%;">
+                        <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-lawnDarkGreen border-2 border-white text-white flex items-center justify-between px-1 shadow-md">
+                            <i class="fas fa-chevron-left text-[8px]"></i>
+                            <i class="fas fa-chevron-right text-[8px]"></i>
+                        </div>
+                    </div>
+                    <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded z-20 pointer-events-none">Before</span>
+                    <span class="absolute top-3 right-3 bg-lawnGreen/80 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded z-20 pointer-events-none">After</span>
+                </div>
+
+                <div class="relative w-[calc(50%-12px)] min-w-[calc(50%-12px)] flex-shrink-0 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-white/10 group select-none cursor-ew-resize bg-black/40 comparison-container" data-index="4">
+                    <img loading="lazy" src="images/after-6.png" alt="After Service" class="absolute inset-0 w-full h-full object-cover pointer-events-none after-img">
+                    <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none before-wrapper" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                        <img loading="lazy" src="images/before-6.png" alt="Before Service" class="absolute inset-0 w-full h-full object-cover pointer-events-none before-img">
+                    </div>
+                    <div class="absolute top-0 bottom-0 w-1 bg-white z-30 slider-handle" style="left: 50%;">
+                        <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-lawnDarkGreen border-2 border-white text-white flex items-center justify-between px-1 shadow-md">
+                            <i class="fas fa-chevron-left text-[8px]"></i>
+                            <i class="fas fa-chevron-right text-[8px]"></i>
+                        </div>
+                    </div>
+                    <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded z-20 pointer-events-none">Before</span>
+                    <span class="absolute top-3 right-3 bg-lawnGreen/80 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded z-20 pointer-events-none">After</span>
+                </div>
+
+                <div class="relative w-[calc(50%-12px)] min-w-[calc(50%-12px)] flex-shrink-0 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-white/10 group select-none cursor-ew-resize bg-black/40 comparison-container" data-index="5">
+                    <img loading="lazy" src="images/after-7.png" alt="After Service" class="absolute inset-0 w-full h-full object-cover pointer-events-none after-img">
+                    <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none before-wrapper" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                        <img loading="lazy" src="images/before-7.png" alt="Before Service" class="absolute inset-0 w-full h-full object-cover pointer-events-none before-img">
+                    </div>
+                    <div class="absolute top-0 bottom-0 w-1 bg-white z-30 slider-handle" style="left: 50%;">
+                        <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-lawnDarkGreen border-2 border-white text-white flex items-center justify-between px-1 shadow-md">
+                            <i class="fas fa-chevron-left text-[8px]"></i>
+                            <i class="fas fa-chevron-right text-[8px]"></i>
+                        </div>
+                    </div>
+                    <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded z-20 pointer-events-none">Before</span>
+                    <span class="absolute top-3 right-3 bg-lawnGreen/80 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded z-20 pointer-events-none">After</span>
+                </div>
+
+                <div class="relative w-[calc(50%-12px)] min-w-[calc(50%-12px)] flex-shrink-0 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-white/10 group select-none cursor-ew-resize bg-black/40 comparison-container clone-card" data-index="0">
+                    <img loading="lazy" src="images/after-5.png" alt="After Service" class="absolute inset-0 w-full h-full object-cover pointer-events-none after-img">
+                    <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none before-wrapper" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                        <img loading="lazy" src="images/before-5.png" alt="Before Service" class="absolute inset-0 w-full h-full object-cover pointer-events-none before-img">
+                    </div>
+                    <div class="absolute top-0 bottom-0 w-1 bg-white z-30 slider-handle" style="left: 50%;">
+                        <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-lawnDarkGreen border-2 border-white text-white flex items-center justify-between px-1 shadow-md">
+                            <i class="fas fa-chevron-left text-[8px]"></i>
+                            <i class="fas fa-chevron-right text-[8px]"></i>
+                        </div>
+                    </div>
+                    <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded z-20 pointer-events-none">Before</span>
+                    <span class="absolute top-3 right-3 bg-lawnGreen/80 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded z-20 pointer-events-none">After</span>
+                </div>
+
+                <div class="relative w-[calc(50%-12px)] min-w-[calc(50%-12px)] flex-shrink-0 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-white/10 group select-none cursor-ew-resize bg-black/40 comparison-container clone-card" data-index="1">
+                    <img loading="lazy" src="images/after-3.png" alt="After Service" class="absolute inset-0 w-full h-full object-cover pointer-events-none after-img">
+                    <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none before-wrapper" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                        <img loading="lazy" src="images/before-3.png" alt="Before Service" class="absolute inset-0 w-full h-full object-cover pointer-events-none before-img">
+                    </div>
+                    <div class="absolute top-0 bottom-0 w-1 bg-white z-30 slider-handle" style="left: 50%;">
+                        <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-lawnDarkGreen border-2 border-white text-white flex items-center justify-between px-1 shadow-md">
+                            <i class="fas fa-chevron-left text-[8px]"></i>
+                            <i class="fas fa-chevron-right text-[8px]"></i>
+                        </div>
+                    </div>
+                    <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded z-20 pointer-events-none">Before</span>
+                    <span class="absolute top-3 right-3 bg-lawnGreen/80 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded z-20 pointer-events-none">After</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="flex items-center justify-center gap-2.5 pt-2" id="dots-container">
+            <button class="w-6 h-3 rounded-full bg-lawnGreen transition-all duration-300 focus:outline-none cursor-pointer active-dot" data-index="0" aria-label="Card 1"></button>
+            <button class="w-3 h-3 rounded-full bg-white/40 hover:bg-white/75 transition-all duration-300 focus:outline-none cursor-pointer" data-index="1" aria-label="Card 2"></button>
+            <button class="w-3 h-3 rounded-full bg-white/40 hover:bg-white/75 transition-all duration-300 focus:outline-none cursor-pointer" data-index="2" aria-label="Card 3"></button>
+            <button class="w-3 h-3 rounded-full bg-white/40 hover:bg-white/75 transition-all duration-300 focus:outline-none cursor-pointer" data-index="3" aria-label="Card 4"></button>
+            <button class="w-3 h-3 rounded-full bg-white/40 hover:bg-white/75 transition-all duration-300 focus:outline-none cursor-pointer" data-index="4" aria-label="Card 5"></button>
+            <button class="w-3 h-3 rounded-full bg-white/40 hover:bg-white/75 transition-all duration-300 focus:outline-none cursor-pointer" data-index="5" aria-label="Card 6"></button>
+        </div>
+
+    </div>
+
+</section>
+<script>
+    const allContainers = document.querySelectorAll('.comparison-container');
+    const track = document.getElementById('carousel-track');
+    const dots = document.querySelectorAll('#dots-container button');
+    
+    let currentIndex = 0;
+    const totalOriginalCards = 6; // Real 6 cards before clones
+    let autoPlayInterval;
+    let isTransitioning = false;
+
+    // Individual Before/After Drag Logic for all cards (including clones)
+    allContainers.forEach(container => {
+        const beforeWrapper = container.querySelector('.before-wrapper');
+        const sliderHandle = container.querySelector('.slider-handle');
+        let isDragging = false;
+
+        function setPosition(percentage) {
+            if (percentage < 0) percentage = 0;
+            if (percentage > 100) percentage = 100;
+            sliderHandle.style.left = percentage + '%';
+            beforeWrapper.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+        }
+
+        function onMove(e) {
+            if (!isDragging) return;
+            const rect = container.getBoundingClientRect();
+            const posX = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+            let percentage = (posX / rect.width) * 100;
+            setPosition(percentage);
+        }
+
+        container.addEventListener('mousedown', (e) => { isDragging = true; stopAutoPlay(); onMove(e); });
+        container.addEventListener('touchstart', (e) => { isDragging = true; stopAutoPlay(); onMove(e); });
+        window.addEventListener('mouseup', () => { isDragging = false; });
+        window.addEventListener('touchend', () => { isDragging = false; });
+        window.addEventListener('mousemove', onMove);
+        window.addEventListener('touchmove', onMove);
+        
+        setPosition(50);
+    });
+
+    // Update Carousel Position with Seamless Reset Logic
+    function updateCarousel(index, withTransition = true) {
+        currentIndex = index;
+        const cardWidth = allContainers[0].getBoundingClientRect().width + 24; // Width + gap-6 (24px)
+        
+        if (!withTransition) {
+            track.style.transition = 'none';
+        } else {
+            track.style.transition = 'transform 0.7s ease-in-out';
+        }
+
+        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+
+        // Highlight active dot (using modulo for mapped original index)
+        const dotIndex = currentIndex % totalOriginalCards;
+        dots.forEach((dot, idx) => {
+            if (idx === dotIndex) {
+                dot.classList.add('bg-lawnGreen', 'w-6');
+                dot.classList.remove('bg-white/40', 'w-3');
+            } else {
+                dot.classList.remove('bg-lawnGreen', 'w-6');
+                dot.classList.add('bg-white/40', 'w-3');
+            }
+        });
+    }
+
+    // Handle Seamless reset when transition ends on clone
+    track.addEventListener('transitionend', () => {
+        if (currentIndex >= totalOriginalCards) {
+            track.style.transition = 'none';
+            currentIndex = 0;
+            track.style.transform = `translateX(0px)`;
+        }
+        isTransitioning = false;
+    });
+
+    // Dot Click Handlers
+    dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+            stopAutoPlay();
+            isTransitioning = false;
+            updateCarousel(idx);
+            startAutoPlay();
+        });
+    });
+
+    // Infinite Auto-Loop Function smoothly continuing forward
+    function startAutoPlay() {
+        stopAutoPlay();
+        autoPlayInterval = setInterval(() => {
+            if (isTransitioning) return;
+            isTransitioning = true;
+            currentIndex++;
+            updateCarousel(currentIndex, true);
+        }, 4000);
+    }
+
+    function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+    }
+
+    // Initialize Auto-Loop
+    updateCarousel(0, false);
+    startAutoPlay();
+
+    // Pause on hover
+    track.addEventListener('mouseenter', stopAutoPlay);
+    track.addEventListener('mouseleave', startAutoPlay);
+</script>
+
+
+
+
+<!-- START: FAQ ACCORDION SECTION -->
+<section class="w-full bg-[#f8f9f8] py-16 md:py-24 font-sans" id="faq-section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            
+            <div class="space-y-6 lg:sticky lg:top-24">
+                
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 shadow-sm text-[#0f2c18] font-medium text-sm">
+                    <img loading="lazy" src="images/leaf-icon.png" alt="Leaf" class="w-5 h-5 object-contain" onerror="this.outerHTML='<i class=\'fas fa-leaf text-[#62a64c]\'></i>'"> 
+                    Frequently Asked Question
+                </div>
+                
+                <h2 class="text-4xl sm:text-5xl md:text-[3.5rem] font-black text-[#0a2e16] uppercase leading-[1.1] tracking-tight">
+                    GOT QUESTIONS? <br>
+                    WE'VE GOT ANSWERS
+                </h2>
+                
+                <p class="text-gray-600 text-base md:text-lg leading-relaxed max-w-md">
+                    Our FAQ section is designed provide clear answer to the most common inquiries, helping you make informed decisions about your lawn care needs.
+                </p>
+                
+                <div class="pt-2">
+                    <button type="button" onclick="openFaqModal()" class="inline-flex items-center justify-center gap-2 bg-[#62a64c] hover:bg-[#528d3f] transition-colors duration-300 text-white px-6 py-3.5 rounded-full font-bold text-xs sm:text-sm uppercase tracking-wide shadow-md cursor-pointer">
+                        SEE COMMON QUESTIONS <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                
+            </div>
+
+            <div class="space-y-4">
+                
+                <div class="faq-item bg-white rounded-2xl shadow-sm cursor-pointer transition-all duration-300 border border-gray-100" onclick="toggleFaq(this)">
+                    <div class="px-6 py-5 flex justify-between items-center gap-4">
+                        <h3 class="q-text font-bold text-gray-800 text-sm sm:text-base flex items-start gap-2 transition-colors duration-300">
+                            <span class="q-mark text-[#62a64c] font-bold">Q.</span> What services does J&B Lawn Services offer?
+                        </h3>
+                        <div class="icon-bg shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#62a64c] flex items-center justify-center transition-colors duration-300">
+                            <i class="icon-arrow fas fa-chevron-down text-white text-[10px] sm:text-xs transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                    <div class="answer-content hidden px-6 pb-6 text-sm text-white/90 leading-relaxed ml-4">
+                        <div class="flex gap-2">
+                            <span class="font-bold text-white">A.</span>
+                            <p>We offer a comprehensive range of services including mowing, trimming, weed control, fertilization, and seasonal cleanups tailored to your property's needs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-[#62a64c] active-faq rounded-2xl shadow-sm cursor-pointer transition-all duration-300 border border-transparent" onclick="toggleFaq(this)">
+                    <div class="px-6 py-5 flex justify-between items-center gap-4">
+                        <h3 class="q-text font-bold text-white text-sm sm:text-base flex items-start gap-2 transition-colors duration-300">
+                            <span class="q-mark text-white font-bold">Q.</span> Are your team members insured and experienced?
+                        </h3>
+                        <div class="icon-bg shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white flex items-center justify-center transition-colors duration-300">
+                            <i class="icon-arrow fas fa-chevron-down text-[#62a64c] text-[10px] sm:text-xs transition-transform duration-300 rotate-180"></i>
+                        </div>
+                    </div>
+                    <div class="answer-content px-6 pb-6 text-sm text-white/90 leading-relaxed ml-4">
+                        <div class="flex gap-2">
+                            <span class="font-bold text-white">A.</span>
+                            <p>Absolutely! Every member of the J&B Lawn Services team is fully trained, experienced, and insured. We take pride delivering high-quality lawn care safely and professionally.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl shadow-sm cursor-pointer transition-all duration-300 border border-gray-100" onclick="toggleFaq(this)">
+                    <div class="px-6 py-5 flex justify-between items-center gap-4">
+                        <h3 class="q-text font-bold text-gray-800 text-sm sm:text-base flex items-start gap-2 transition-colors duration-300">
+                            <span class="q-mark text-[#62a64c] font-bold">Q.</span> Can I customize the services for my lawn?
+                        </h3>
+                        <div class="icon-bg shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#62a64c] flex items-center justify-center transition-colors duration-300">
+                            <i class="icon-arrow fas fa-chevron-down text-white text-[10px] sm:text-xs transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                    <div class="answer-content hidden px-6 pb-6 text-sm text-white/90 leading-relaxed ml-4">
+                        <div class="flex gap-2">
+                            <span class="font-bold text-white">A.</span>
+                            <p>Yes, we provide fully customizable plans. Whether you need a one-time cleanup or ongoing weekly maintenance, we adapt our services to fit your lawn's specific requirements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl shadow-sm cursor-pointer transition-all duration-300 border border-gray-100" onclick="toggleFaq(this)">
+                    <div class="px-6 py-5 flex justify-between items-center gap-4">
+                        <h3 class="q-text font-bold text-gray-800 text-sm sm:text-base flex items-start gap-2 transition-colors duration-300">
+                            <span class="q-mark text-[#62a64c] font-bold">Q.</span> Do you provide landscaping design services?
+                        </h3>
+                        <div class="icon-bg shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#62a64c] flex items-center justify-center transition-colors duration-300">
+                            <i class="icon-arrow fas fa-chevron-down text-white text-[10px] sm:text-xs transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                    <div class="answer-content hidden px-6 pb-6 text-sm text-white/90 leading-relaxed ml-4">
+                        <div class="flex gap-2">
+                            <span class="font-bold text-white">A.</span>
+                            <p>While our primary focus is maintenance and care, we do offer basic landscaping enhancements like mulch installation, bed defining, and seasonal flower planting.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl shadow-sm cursor-pointer transition-all duration-300 border border-gray-100" onclick="toggleFaq(this)">
+                    <div class="px-6 py-5 flex justify-between items-center gap-4">
+                        <h3 class="q-text font-bold text-gray-800 text-sm sm:text-base flex items-start gap-2 transition-colors duration-300">
+                            <span class="q-mark text-[#62a64c] font-bold">Q.</span> How do I maintain my lawn between services?
+                        </h3>
+                        <div class="icon-bg shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#62a64c] flex items-center justify-center transition-colors duration-300">
+                            <i class="icon-arrow fas fa-chevron-down text-white text-[10px] sm:text-xs transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                    <div class="answer-content hidden px-6 pb-6 text-sm text-white/90 leading-relaxed ml-4">
+                        <div class="flex gap-2">
+                            <span class="font-bold text-white">A.</span>
+                            <p>Water deeply but infrequently (usually 1-2 times a week), avoid cutting the grass too short, and ensure your pets don't damage specific spots. Our experts will leave you with personalized tips after every visit!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<div id="faqModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs p-4 hidden opacity-0 transition-opacity duration-300">
+    
+    <div class="bg-[#f0f0f0] rounded-[2.5rem] max-w-3xl w-full p-8 sm:p-12 shadow-2xl border border-gray-300 transform scale-95 transition-transform duration-300 max-h-[90vh] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden relative" id="faqModalContent">
+        
+        <div class="sticky top-0 z-20 flex justify-end pb-4 pt-1 bg-transparent -mt-2 mb-2 pointer-events-none">
+            <button onclick="closeFaqModal()" class="w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-700 hover:bg-gray-100 transition-all flex items-center justify-center shadow-md cursor-pointer pointer-events-auto">
+                <i class="fas fa-times text-sm"></i>
+            </button>
+        </div>
+
+        <div class="mb-8 text-center sm:text-left">
+            <span class="text-[11px] font-bold uppercase tracking-widest text-gray-500 bg-white px-4 py-1.5 rounded-full border border-gray-200">010 • FAQS</span>
+            <h2 class="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight mt-4">Common Questions</h2>
+        </div>
+
+        <div class="space-y-4">
+            
+            <div class="modal-faq-item bg-white/80 hover:bg-white rounded-full px-6 py-5 shadow-xs cursor-pointer transition-all duration-400 border border-gray-200/80 overflow-hidden" onclick="toggleModalFaq(this)">
+                <div class="flex justify-between items-center gap-4">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs font-semibold text-gray-400">1</span>
+                        <h4 class="font-bold text-gray-800 text-sm sm:text-base">What services does J&B Lawn Services offer?</h4>
+                    </div>
+                    <div class="modal-icon shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center transition-transform duration-300 text-xs">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="modal-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6">
+                    <div class="pt-4 pb-2 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-4 ml-6">
+                        <p>We offer a comprehensive range of services including mowing, trimming, weed control, fertilization, and seasonal cleanups tailored to your property's needs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-faq-item bg-white/80 hover:bg-white rounded-full px-6 py-5 shadow-xs cursor-pointer transition-all duration-400 border border-gray-200/80 overflow-hidden" onclick="toggleModalFaq(this)">
+                <div class="flex justify-between items-center gap-4">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs font-semibold text-gray-400">2</span>
+                        <h4 class="font-bold text-gray-800 text-sm sm:text-base">Are your team members insured and experienced?</h4>
+                    </div>
+                    <div class="modal-icon shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center transition-transform duration-300 text-xs">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="modal-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6">
+                    <div class="pt-4 pb-2 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-4 ml-6">
+                        <p>Absolutely! Every member of the J&B Lawn Services team is fully trained, experienced, and insured. We take pride delivering high-quality lawn care safely and professionally.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-faq-item bg-white/80 hover:bg-white rounded-full px-6 py-5 shadow-xs cursor-pointer transition-all duration-400 border border-gray-200/80 overflow-hidden" onclick="toggleModalFaq(this)">
+                <div class="flex justify-between items-center gap-4">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs font-semibold text-gray-400">3</span>
+                        <h4 class="font-bold text-gray-800 text-sm sm:text-base">Can I customize the services for my lawn?</h4>
+                    </div>
+                    <div class="modal-icon shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center transition-transform duration-300 text-xs">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="modal-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6">
+                    <div class="pt-4 pb-2 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-4 ml-6">
+                        <p>Yes, we provide fully customizable plans. Whether you need a one-time cleanup or ongoing weekly maintenance, we adapt our services to fit your lawn's specific requirements.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-faq-item bg-white/80 hover:bg-white rounded-full px-6 py-5 shadow-xs cursor-pointer transition-all duration-400 border border-gray-200/80 overflow-hidden" onclick="toggleModalFaq(this)">
+                <div class="flex justify-between items-center gap-4">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs font-semibold text-gray-400">4</span>
+                        <h4 class="font-bold text-gray-800 text-sm sm:text-base">Do you provide landscaping design services?</h4>
+                    </div>
+                    <div class="modal-icon shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center transition-transform duration-300 text-xs">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="modal-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6">
+                    <div class="pt-4 pb-2 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-4 ml-6">
+                        <p>While our primary focus is maintenance and care, we do offer basic landscaping enhancements like mulch installation, bed defining, and seasonal flower planting.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function openFaqModal() {
+        const modal = document.getElementById('faqModal');
+        const content = document.getElementById('faqModalContent');
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            content.classList.remove('scale-95');
+            content.classList.add('scale-100');
+        }, 10);
+    }
+
+    function closeFaqModal() {
+        const modal = document.getElementById('faqModal');
+        const content = document.getElementById('faqModalContent');
+        modal.classList.add('opacity-0');
+        content.classList.remove('scale-100');
+        content.classList.add('scale-95');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 300);
+    }
+
+    window.addEventListener('click', function(e) {
+        const modal = document.getElementById('faqModal');
+        if (e.target === modal) {
+            closeFaqModal();
+        }
+    });
+
+    function toggleModalFaq(element) {
+        const allItems = document.querySelectorAll('.modal-faq-item');
+        const answer = element.querySelector('.modal-answer');
+        const icon = element.querySelector('.modal-icon');
+        const isCurrentlyOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+
+        allItems.forEach(item => {
+            const itemAnswer = item.querySelector('.modal-answer');
+            const itemIcon = item.querySelector('.modal-icon');
+            itemAnswer.style.maxHeight = '0px';
+            item.classList.remove('rounded-[2rem]', 'border-2', 'border-indigo-300/60', 'bg-white', 'shadow-md');
+            item.classList.add('rounded-full', 'bg-white/80', 'shadow-xs');
+            itemIcon.classList.remove('rotate-45');
+        });
+
+        if (!isCurrentlyOpen) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            element.classList.remove('rounded-full', 'bg-white/80', 'shadow-xs');
+            element.classList.add('rounded-[2rem]', 'border-2', 'border-indigo-300/60', 'bg-white', 'shadow-md');
+            icon.classList.add('rotate-45');
+        }
+    }
+</script>
+
+
+
+<!-- SCRIPT FOR ACCORDION INTERACTIVITY -->
+<script>
+    function toggleFaq(element) {
+        const allItems = document.querySelectorAll('.faq-item');
+        const isActive = element.classList.contains('active-faq');
+        
+        // Close all items
+        allItems.forEach(item => {
+            // Reset Container styles
+            item.classList.remove('active-faq', 'bg-[#62a64c]', 'border-transparent');
+            item.classList.add('bg-white', 'border-gray-100');
+            
+            // Reset Main Text
+            const qText = item.querySelector('.q-text');
+            qText.classList.remove('text-white');
+            qText.classList.add('text-gray-800');
+            
+            // Reset 'Q.' Mark
+            const qMark = item.querySelector('.q-mark');
+            qMark.classList.remove('text-white');
+            qMark.classList.add('text-[#62a64c]');
+            
+            // Reset Icon Background
+            const iconBg = item.querySelector('.icon-bg');
+            iconBg.classList.remove('bg-white');
+            iconBg.classList.add('bg-[#62a64c]');
+            
+            // Reset Arrow Icon
+            const iconArrow = item.querySelector('.icon-arrow');
+            iconArrow.classList.remove('text-[#62a64c]', 'rotate-180');
+            iconArrow.classList.add('text-white');
+            
+            // Hide Answer
+            const answer = item.querySelector('.answer-content');
+            answer.classList.add('hidden');
+        });
+
+        // If the clicked item was NOT active, open it now
+        if (!isActive) {
+            // Set Container styles
+            element.classList.add('active-faq', 'bg-[#62a64c]', 'border-transparent');
+            element.classList.remove('bg-white', 'border-gray-100');
+            
+            // Set Main Text
+            const qText = element.querySelector('.q-text');
+            qText.classList.add('text-white');
+            qText.classList.remove('text-gray-800');
+            
+            // Set 'Q.' Mark
+            const qMark = element.querySelector('.q-mark');
+            qMark.classList.add('text-white');
+            qMark.classList.remove('text-[#62a64c]');
+            
+            // Set Icon Background
+            const iconBg = element.querySelector('.icon-bg');
+            iconBg.classList.add('bg-white');
+            iconBg.classList.remove('bg-[#62a64c]');
+            
+            // Set Arrow Icon
+            const iconArrow = element.querySelector('.icon-arrow');
+            iconArrow.classList.add('text-[#62a64c]', 'rotate-180');
+            iconArrow.classList.remove('text-white');
+            
+            // Show Answer
+            const answer = element.querySelector('.answer-content');
+            answer.classList.remove('hidden');
+        }
+    }
+</script>
+<!-- END: FAQ ACCORDION SECTION -->
+
+
+
+<!--testimonial-->
+
+<!-- START: NATURAL SPREAD TESTIMONIALS SECTION (Balanced & Clean) -->
+<section class="w-full bg-lawnDarkGreen py-16 md:py-24 relative select-none overflow-hidden" id="testimonials-section">
+    
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+        
+        <div class="text-center space-y-2 relative z-50">
+            <div>
+                <span class="bg-lawnGreen/25 text-lawnGreen font-bold text-[9px] uppercase tracking-widest px-3 py-1 rounded-full border border-lawnGreen/30 inline-flex items-center gap-1.5">
+                    <i class="fas fa-comment-dots text-[7px]"></i> Client Testimonials
+                </span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight uppercase">
+                What our clients say <br>
+                <span class="text-lawnGreen font-light italic lowercase font-serif tracking-normal text-xl sm:text-2xl block mt-0.5">"trusted by homeowners everywhere."</span>
+            </h2>
+        </div>
+
+        <div class="w-full flex flex-wrap justify-center items-center gap-6 max-w-5xl mx-auto pt-4">
+            
+            <div class="w-[270px] sm:w-[290px] bg-white/10 backdrop-blur-md border border-white/15 p-4 rounded-2xl shadow-xl transform -rotate-3 hover:rotate-0 hover:z-50 transition-all duration-300 -translate-y-2 sm:-translate-y-4">
+                <div class="flex items-center justify-between text-[9px] text-lawnGreen font-bold mb-1">
+                    <span class="flex items-center gap-1"><i class="fas fa-circle text-[5px]"></i> Verified</span>
+                    <span class="text-white/60">6d ago</span>
+                </div>
+                <p class="text-white text-xs sm:text-sm font-medium leading-relaxed">
+                    "Absolute game changer for our weekend relaxation!"
+                </p>
+                <div class="mt-2 flex items-center gap-2 pt-1.5 border-t border-white/10">
+                    <img loading="lazy" src="images/test-1.jpg" alt="Anna W." class="w-5 h-5 rounded-full object-cover border border-lawnGreen">
+                    <span class="text-[10px] font-semibold text-white/90">Anna W.</span>
+                </div>
+            </div>
+
+            <div class="w-[275px] sm:w-[295px] bg-white/12 backdrop-blur-md border border-white/20 p-4 rounded-2xl shadow-xl transform rotate-2 hover:rotate-0 hover:z-50 transition-all duration-300 translate-y-1 sm:translate-y-3">
+                <div class="flex items-center justify-between text-[9px] text-lawnGreen font-bold mb-1">
+                    <span class="flex items-center gap-1"><i class="fas fa-circle text-[5px]"></i> Verified</span>
+                    <span class="text-white/60">2h ago</span>
+                </div>
+                <p class="text-white text-xs sm:text-sm font-medium leading-relaxed">
+                    "My lawn looks absolute perfection! Never seen it this green."
+                </p>
+                <div class="mt-2 flex items-center gap-2 pt-1.5 border-t border-white/10">
+                    <img loading="lazy" src="images/test-2.jpg" alt="David M." class="w-5 h-5 rounded-full object-cover border border-lawnGreen">
+                    <span class="text-[10px] font-semibold text-white/90">David M.</span>
+                </div>
+            </div>
+
+            <div class="w-[270px] sm:w-[290px] bg-white/10 backdrop-blur-md border border-white/15 p-4 rounded-2xl shadow-xl transform -rotate-2 hover:rotate-0 hover:z-50 transition-all duration-300 -translate-y-1 sm:-translate-y-3">
+                <div class="flex items-center justify-between text-[9px] text-lawnGreen font-bold mb-1">
+                    <span class="flex items-center gap-1"><i class="fas fa-circle text-[5px]"></i> Verified</span>
+                    <span class="text-white/60">6d ago</span>
+                </div>
+                <p class="text-white text-xs sm:text-sm font-medium leading-relaxed">
+                    "Prompt, polite, and exceptionally thorough with care."
+                </p>
+                <div class="mt-2 flex items-center gap-2 pt-1.5 border-t border-white/10">
+                    <img loading="lazy" src="images/test-3.jpg" alt="Kevin G." class="w-5 h-5 rounded-full object-cover border border-lawnGreen">
+                    <span class="text-[10px] font-semibold text-white/90">Kevin G.</span>
+                </div>
+            </div>
+
+            <div class="w-[275px] sm:w-[295px] bg-white/12 backdrop-blur-md border border-white/20 p-4 rounded-2xl shadow-xl transform rotate-1 hover:rotate-0 hover:z-50 transition-all duration-300 translate-y-2 sm:translate-y-2">
+                <div class="flex items-center justify-between text-[9px] text-lawnGreen font-bold mb-1">
+                    <span class="flex items-center gap-1"><i class="fas fa-circle text-[5px]"></i> Verified</span>
+                    <span class="text-white/60">5h ago</span>
+                </div>
+                <p class="text-white text-xs sm:text-sm font-medium leading-relaxed">
+                    "Super professional team. They showed up right on time!"
+                </p>
+                <div class="mt-2 flex items-center gap-2 pt-1.5 border-t border-white/10">
+                    <img loading="lazy" src="images/test-4.webp" alt="Sarah L." class="w-5 h-5 rounded-full object-cover border border-lawnGreen">
+                    <span class="text-[10px] font-semibold text-white/90">Sarah L.</span>
+                </div>
+            </div>
+
+            <div class="w-[280px] sm:w-[305px] bg-white/15 backdrop-blur-md border border-white/25 p-4 rounded-2xl shadow-xl transform -rotate-1 hover:rotate-0 hover:z-50 transition-all duration-300 -translate-y-2">
+                <div class="flex items-center justify-between text-[9px] text-lawnGreen font-bold mb-1">
+                    <span class="flex items-center gap-1"><i class="fas fa-circle text-[5px]"></i> Verified</span>
+                    <span class="text-white/60">1d ago</span>
+                </div>
+                <p class="text-white text-xs sm:text-sm font-medium leading-relaxed">
+                    "Fair pricing and incredible weed control results here."
+                </p>
+                <div class="mt-2 flex items-center gap-2 pt-1.5 border-t border-white/10">
+                    <img loading="lazy" src="images/test-5.webp" alt="Robert K." class="w-5 h-5 rounded-full object-cover border border-lawnGreen">
+                    <span class="text-[10px] font-semibold text-white/90">Robert K.</span>
+                </div>
+            </div>
+
+            <div class="w-[275px] sm:w-[295px] bg-white/12 backdrop-blur-md border border-white/20 p-4 rounded-2xl shadow-xl transform rotate-2 hover:rotate-0 hover:z-50 transition-all duration-300 translate-y-1 sm:translate-y-4">
+                <div class="flex items-center justify-between text-[9px] text-lawnGreen font-bold mb-1">
+                    <span class="flex items-center gap-1"><i class="fas fa-circle text-[5px]"></i> Verified</span>
+                    <span class="text-white/60">3d ago</span>
+                </div>
+                <p class="text-white text-xs sm:text-sm font-medium leading-relaxed">
+                    "Communication is great, and my grass looks much healthier."
+                </p>
+                <div class="mt-2 flex items-center gap-2 pt-1.5 border-t border-white/10">
+                    <img loading="lazy" src="images/test-6.jpg" alt="Michael P." class="w-5 h-5 rounded-full object-cover border border-lawnGreen">
+                    <span class="text-[10px] font-semibold text-white/90">Michael P.</span>
+                </div>
+            </div>
+
+            <div class="w-[270px] sm:w-[290px] bg-white/10 backdrop-blur-md border border-white/15 p-4 rounded-2xl shadow-xl transform -rotate-3 hover:rotate-0 hover:z-50 transition-all duration-300 -translate-y-1 sm:-translate-y-2">
+                <div class="flex items-center justify-between text-[9px] text-lawnGreen font-bold mb-1">
+                    <span class="flex items-center gap-1"><i class="fas fa-circle text-[5px]"></i> Verified</span>
+                    <span class="text-white/60">4d ago</span>
+                </div>
+                <p class="text-white text-xs sm:text-sm font-medium leading-relaxed">
+                    "Friendly crew, fast service, and completely hassle-free."
+                </p>
+                <div class="mt-2 flex items-center gap-2 pt-1.5 border-t border-white/10">
+                    <img loading="lazy" src="images/test-7.avif" alt="Jessica T." class="w-5 h-5 rounded-full object-cover border border-lawnGreen">
+                    <span class="text-[10px] font-semibold text-white/90">Jessica T.</span>
+                </div>
+            </div>
+
+            <div class="w-[270px] sm:w-[290px] bg-white/10 backdrop-blur-md border border-white/15 p-4 rounded-2xl shadow-xl transform rotate-3 hover:rotate-0 hover:z-50 transition-all duration-300 translate-y-1 sm:translate-y-2">
+                <div class="flex items-center justify-between text-[9px] text-lawnGreen font-bold mb-1">
+                    <span class="flex items-center gap-1"><i class="fas fa-circle text-[5px]"></i> Verified</span>
+                    <span class="text-white/60">1w ago</span>
+                </div>
+                <p class="text-white text-xs sm:text-sm font-medium leading-relaxed">
+                    "Incredible transformation on our front yard grass."
+                </p>
+                <div class="mt-2 flex items-center gap-2 pt-1.5 border-t border-white/10">
+                    <img loading="lazy" src="images/test-8.avif" alt="Rachel L." class="w-5 h-5 rounded-full object-cover border border-lawnGreen">
+                    <span class="text-[10px] font-semibold text-white/90">Rachel L.</span>
+                </div>
+            </div>
+
+            <div class="w-[275px] sm:w-[295px] bg-white/12 backdrop-blur-md border border-white/20 p-4 rounded-2xl shadow-xl transform -rotate-2 hover:rotate-0 hover:z-50 transition-all duration-300 -translate-y-2 sm:-translate-y-3">
+                <div class="flex items-center justify-between text-[9px] text-lawnGreen font-bold mb-1">
+                    <span class="flex items-center gap-1"><i class="fas fa-circle text-[5px]"></i> Verified</span>
+                    <span class="text-white/60">5d ago</span>
+                </div>
+                <p class="text-white text-xs sm:text-sm font-medium leading-relaxed">
+                    "Best lawn maintenance experience I've had in years!"
+                </p>
+                <div class="mt-2 flex items-center gap-2 pt-1.5 border-t border-white/10">
+                    <img loading="lazy" src="images/test-9.jpg" alt="Brian H." class="w-5 h-5 rounded-full object-cover border border-lawnGreen">
+                    <span class="text-[10px] font-semibold text-white/90">Brian H.</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- END: NATURAL SPREAD TESTIMONIALS SECTION -->
+
+
+
+
+<!-- START: LARGER & WIDER TRUE OVERFLOW TRANSPARENT IMAGE CTA BANNER -->
+<section class="relative w-full bg-white py-16 md:py-20 font-sans my-0 overflow-visible">
+    
+    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        
+        <div class="bg-[#f8f9f8] border border-[#62a64c]/25 rounded-3xl p-8 sm:p-10 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 shadow-sm relative overflow-visible">
+            
+            <!-- LEFT COLUMN: CONTENT -->
+            <div class="flex-1 space-y-4 text-left relative z-10">
+                <h2 class="text-3xl sm:text-4xl md:text-[2.75rem] font-black text-[#0a2e16] uppercase tracking-tight leading-tight">
+                    LET'S GROW SOMETHING <br>
+                    BEAUTIFUL TOGETHER
+                </h2>
+                
+                <p class="text-gray-600 text-sm sm:text-base leading-relaxed max-w-2xl">
+                    Your dream garden is just one step away. Whether you're starting fresh or adding to your green space, J&B Lawn is here to help you.
+                </p>
+                
+                <!-- Buttons Group -->
+                <div class="flex flex-wrap items-center gap-3.5 pt-3">
+                    <a href="tel:9132779514" class="inline-flex items-center gap-2.5 bg-[#62a64c] hover:bg-[#528d3f] transition-colors duration-300 text-white px-6 py-3 rounded-full font-bold text-xs sm:text-sm shadow-md">
+                        <i class="fas fa-phone-alt"></i> 913-277-9514
+                    </a>
+                    
+                    <a href="contact.html" class="inline-flex items-center gap-2.5 bg-white hover:bg-gray-50 border border-gray-200 transition-colors duration-300 text-[#0a2e16] px-6 py-3 rounded-full font-bold text-xs sm:text-sm shadow-md">
+                        CONTACT US TODAY <i class="fas fa-arrow-right text-[#62a64c]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: LARGER OVERFLOW IMAGE -->
+
+            <div class="w-full md:w-[38%] lg:w-[40%] h-[200px] sm:h-[240px] shrink-0 relative overflow-visible flex justify-center md:justify-end">
+                <div class="absolute bottom-[-48px] right-0 md:-right-4 h-[380px] sm:h-[420px] pointer-events-none flex items-end">
+                    <img loading="lazy" src="images/help-44.png" alt="Worker" class="max-h-full w-auto object-contain transform hover:scale-105 transition-transform duration-500 drop-shadow-2xl" onerror="this.outerHTML='<div class=\'w-56 h-72 bg-[#0a2e16] rounded-2xl flex flex-col items-center justify-center text-white/50 gap-2 pointer-events-auto\'><i class=\'fas fa-leaf text-3xl text-[#62a64c]\'></i><span class=\'text-[10px] uppercase font-bold tracking-widest\'>J&B Lawn Care</span></div>'">
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+</section>
+<!-- END: LARGER & WIDER TRUE OVERFLOW TRANSPARENT IMAGE CTA BANNER -->
+
+
+<footer class="bg-lawnDarkGreen text-white/70 border-t border-white/10 pt-16 pb-12 px-4 md:px-12 text-sm">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        
+        <div class="space-y-4">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-lawnGreen rounded-lg flex items-center justify-center text-white">
+                    <i class="fas fa-leaf text-sm"></i>
+                </div>
+                <span class="font-extrabold text-white text-base">J&B LAWN SERVICES</span>
+            </div>
+            <p class="text-white/50 text-xs leading-relaxed">
+                Professional, reliable, and detailed landscaping solutions engineered to preserve outdoor beauty throughout every seasonal transition.
+            </p>
+            <div class="flex gap-3 text-lawnGreen pt-2">
+                <a href="#" class="w-8 h-8 rounded-full bg-white/5 hover:bg-lawnGreen hover:text-white flex items-center justify-center smooth-transition"><i class="fab fa-facebook-f text-xs"></i></a>
+                <a href="#" class="w-8 h-8 rounded-full bg-white/5 hover:bg-lawnGreen hover:text-white flex items-center justify-center smooth-transition"><i class="fab fa-instagram text-xs"></i></a>
+                <a href="#" class="w-8 h-8 rounded-full bg-white/5 hover:bg-lawnGreen hover:text-white flex items-center justify-center smooth-transition"><i class="fab fa-twitter text-xs"></i></a>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <h4 class="text-white font-bold text-xs uppercase tracking-wider">Quick Navigation</h4>
+            <ul class="space-y-2.5 text-xs text-white/60">
+                <li><a href="index.html" class="hover:text-lawnGreen smooth-transition">Home Overview</a></li>
+                <li><a href="about.html" class="hover:text-lawnGreen smooth-transition">About Our Team</a></li>
+                <li><a href="index.html#services" class="hover:text-lawnGreen smooth-transition">Services List</a></li>
+                <li><a href="project.html" class="hover:text-lawnGreen smooth-transition">Project Portfolio</a></li>
+                <li><a href="service.html" class="hover:text-lawnGreen smooth-transition">Service Timeline</a></li>
+            </ul>
+        </div>
+
+        <div class="space-y-4">
+            <h4 class="text-white font-bold text-xs uppercase tracking-wider">Get In Touch</h4>
+            <div class="space-y-2.5 text-xs text-white/60">
+                <p class="flex items-center gap-2"><i class="fas fa-phone-alt text-lawnGreen"></i> 913-277-9514</p>
+                <p class="flex items-center gap-2"><i class="fas fa-envelope text-lawnGreen"></i> info@jblawnservices.com</p>
+                <p class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-lawnGreen"></i> Overland Park, Kansas</p>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <h4 class="text-white font-bold text-xs uppercase tracking-wider">Stay Connected</h4>
+            <p class="text-white/50 text-xs">Drop your email or quick message for seasonal discounts and instant support updates.</p>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" id="footer-form" class="flex flex-col gap-2.5">
+                <input type="hidden" name="access_key" value="04ad0d1d-51a2-4dc8-92c0-a3a531277e6f">
+                
+                <input type="hidden" name="subject" value="New Quick Message / Newsletter Signup from Footer">
+                
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <input type="text" name="message" placeholder="Write your message or email..." required
+                    class="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white placeholder-white/40 focus:outline-none focus:border-lawnGreen">
+                
+                <button type="submit" id="footer-submit-btn"
+                    class="bg-lawnGreen hover:bg-green-600 text-white font-bold py-2.5 px-4 rounded-xl text-xs uppercase tracking-wider cursor-pointer smooth-transition active:scale-95">
+                    Submit Request
+                </button>
+            </form>
+
+            <div id="footer-form-result" class="text-center text-xs font-semibold"></div>
+        </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto border-t border-white/5 pt-6 text-center text-xs text-white/40 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p>&copy; 2026 J&B Lawn Services. All rights reserved.</p>
+        <div class="flex gap-6">
+            <a href="#" class="hover:text-lawnGreen smooth-transition">Privacy Policy</a>
+            <a href="#" class="hover:text-lawnGreen smooth-transition">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const footerForm = document.getElementById('footer-form');
+    const footerResult = document.getElementById('footer-form-result');
+    const footerSubmitBtn = document.getElementById('footer-submit-btn');
+
+    footerForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(footerForm);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+        
+        footerResult.innerHTML = "Sending...";
+        footerResult.className = "text-center text-xs font-semibold text-white/50";
+        footerSubmitBtn.disabled = true;
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let jsonResponse = await response.json();
+            if (response.status == 200) {
+                footerResult.innerHTML = "Success! Request sent.";
+                footerResult.className = "text-center text-xs font-semibold text-lawnGreen";
+                footerForm.reset();
+            } else {
+                footerResult.innerHTML = jsonResponse.message;
+                footerResult.className = "text-center text-xs font-semibold text-red-400";
+            }
+        })
+        .catch(error => {
+            footerResult.innerHTML = "Something went wrong! Try again.";
+            footerResult.className = "text-center text-xs font-semibold text-red-400";
+        })
+        .then(() => {
+            footerSubmitBtn.disabled = false;
+            setTimeout(() => {
+                footerResult.innerHTML = "";
+            }, 5000);
+        });
+    });
+</script>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // about2.html load kora
+        fetch('about2.html')
+            .then(response => {
+                if (!response.ok) throw new Error("Network response was not ok");
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('about-container').innerHTML = data;
+            })
+            .catch(error => {
+                document.getElementById('about-container').innerHTML = '<p class="text-center py-6 text-red-500">Failed to load About section.</p>';
+            });
+
+        // project2.html load kora
+        fetch('project2.html')
+            .then(response => {
+                if (!response.ok) throw new Error("Network response was not ok");
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('project-container').innerHTML = data;
+            })
+            .catch(error => {
+                document.getElementById('project-container').innerHTML = '<p class="text-center py-6 text-red-500">Failed to load Projects section.</p>';
+            });
+    });
+</script>
+
+
+
+
+<script>
+    // Lazy-load background videos: only fetch/play when scrolled near viewport
+    document.addEventListener("DOMContentLoaded", function() {
+        const lazyVideos = document.querySelectorAll("video.lazy-video");
+
+        const videoObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const video = entry.target;
+                    video.querySelectorAll("source[data-src]").forEach(source => {
+                        source.src = source.dataset.src;
+                        source.removeAttribute("data-src");
+                    });
+                    video.load();
+                    video.play().catch(() => {});
+                    observer.unobserve(video);
+                }
+            });
+        }, { rootMargin: "300px 0px" }); // start loading a bit before it's visible
+
+        lazyVideos.forEach(video => videoObserver.observe(video));
+    });
+</script>
+
+<script>
+    // Mobile Menu Toggle Script
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuBtn.querySelector('i');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+        if (mobileMenu.classList.contains('flex')) {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-times');
+        } else {
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+        }
+    });
+</script>
+
+
+
+</body>
+</html>
+

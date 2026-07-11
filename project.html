@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery - J&B Lawn Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lawnGreen: '#5CB85C',
+                        lawnDarkGreen: '#0B2214',
+                        lawnBgLight: '#F4F6F4',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Hide scrollbars across all browsers while keeping scroll functionality */
+        html {
+            scrollbar-width: none;
+            visibility: visible;
+            opacity: 1;
+        }
+        body {
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .smooth-transition {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        @keyframes smoothFadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-smooth-entry {
+            animation: smoothFadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .reveal-card {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-card.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-sans text-white bg-lawnDarkGreen overflow-x-hidden overflow-y-scroll">
+
+<nav class="bg-lawnDarkGreen/95 backdrop-blur-md text-white sticky top-0 z-50 border-b border-white/5 shadow-lg px-4 md:px-12 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
+        
+        <!-- Logo Area -->
+        <a href="index.html" class="flex items-center gap-3 group cursor-pointer">
+            <div class="w-10 h-10 bg-gradient-to-br from-lawnGreen to-emerald-600 rounded-xl flex items-center justify-center text-white shadow-md shadow-lawnGreen/20 smooth-transition group-hover:scale-105">
+                <i class="fas fa-leaf text-lg"></i>
+            </div>
+            <div class="leading-tight">
+                <span class="text-lg font-extrabold tracking-wider block text-white">J&B</span>
+                <span class="text-[10px] text-lawnGreen font-semibold tracking-widest uppercase block -mt-1">LAWN SERVICES</span>
+            </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden lg:flex items-center gap-8 font-medium text-white/80 text-xs uppercase tracking-wider">
+            <a href="index.html" class="hover:text-lawnGreen smooth-transition">Home</a>
+            <a href="about.html" class="hover:text-lawnGreen smooth-transition">About</a>
+            <a href="service.html" class="hover:text-lawnGreen smooth-transition">Services</a>
+            <a href="project.html" class="text-lawnGreen font-bold">Project</a>
+            <a href="contact.html" class="hover:text-lawnGreen smooth-transition">Contact</a>
+        </div>
+
+        <!-- Right Side: Phone & Mobile Hamburger Toggle -->
+        <div class="flex items-center gap-4">
+            <!-- Action/Contact Button -->
+            <a href="tel:9132779514" class="flex items-center gap-3 group cursor-pointer">
+                <div class="bg-lawnGreen text-white p-2.5 rounded-full hidden sm:flex items-center justify-center w-10 h-10 group-hover:animate-bounce">
+                    <i class="fas fa-phone-alt text-sm"></i>
+                </div>
+                <div class="text-right sm:text-left">
+                    <p class="text-[10px] text-white/50 font-medium uppercase tracking-wider">Call Now</p>
+                    <p class="text-sm md:text-base font-bold text-white group-hover:text-lawnGreen smooth-transition">913-277-9514</p>
+                </div>
+            </a>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" class="lg:hidden text-white focus:outline-none p-2 text-xl cursor-pointer">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden flex-col gap-4 mt-4 pt-4 border-t border-white/10 font-medium text-xs uppercase tracking-wider pb-2">
+        <a href="index.html" class="block py-2 hover:text-lawnGreen smooth-transition">Home</a>
+        <a href="about.html" class="block py-2 hover:text-lawnGreen smooth-transition">About</a>
+        <a href="service.html" class="block py-2 hover:text-lawnGreen smooth-transition">Services</a>
+        <a href="project.html" class="block py-2 text-lawnGreen font-bold">Project</a>
+        <a href="contact.html" class="block py-2 hover:text-lawnGreen smooth-transition">Contact</a>
+    </div>
+</nav>
+
+<header class="pt-12 pb-16 px-4 md:px-12 text-center max-w-7xl mx-auto">
+    <span class="bg-white/10 backdrop-blur-md text-lawnGreen text-xs font-semibold px-4 py-2 rounded-full inline-flex items-center gap-2 mb-4 border border-white/10 opacity-0 animate-smooth-entry" style="animation-delay: 0.1s;">
+        <span class="w-2 h-2 rounded-full bg-lawnGreen animate-ping"></span> Our Portfolio
+    </span>
+    
+    <h1 class="text-3xl md:text-6xl font-black tracking-tight mb-4 opacity-0 animate-smooth-entry" style="animation-delay: 0.25s;">
+        Project <span class="text-lawnGreen">Gallery</span>
+    </h1>
+    
+    <p class="text-white/60 max-w-2xl mx-auto text-sm md:text-base leading-relaxed opacity-0 animate-smooth-entry" style="animation-delay: 0.4s;">
+        Hand-curated landscapes and green space transformations showcasing our finest dedication to aesthetic, precision, and outdoor living design.
+    </p>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 md:px-12 pb-24">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="reveal-card relative h-[420px] rounded-2xl overflow-hidden bg-cover bg-center flex flex-col justify-end p-6 shadow-xl smooth-transition hover:-translate-y-1.5" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80');">
+            <div class="absolute inset-0 bg-gradient-to-t from-lawnDarkGreen via-lawnDarkGreen/40 to-transparent z-0"></div>
+            <span class="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold z-10">Featured</span>
+            <div class="relative z-10">
+                <p class="text-lawnGreen text-[10px] uppercase font-bold tracking-widest mb-1">Landscaping</p>
+                <h3 class="text-lg font-bold mb-3 leading-snug text-white">A Guide To Lush Green Frontyards</h3>
+            </div>
+        </div>
+
+        <div class="reveal-card relative h-[420px] rounded-2xl overflow-hidden bg-cover bg-center flex flex-col justify-end p-6 shadow-xl smooth-transition hover:-translate-y-1.5" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80');">
+            <div class="absolute inset-0 bg-gradient-to-t from-lawnDarkGreen via-lawnDarkGreen/40 to-transparent z-0"></div>
+            <span class="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold z-10">Design</span>
+            <div class="relative z-10">
+                <p class="text-lawnGreen text-[10px] uppercase font-bold tracking-widest mb-1">Commercial</p>
+                <h3 class="text-lg font-bold mb-3 leading-snug text-white">Modern Corporate Lawn Layout</h3>
+            </div>
+        </div>
+
+        <div class="reveal-card relative h-[420px] rounded-2xl overflow-hidden bg-cover bg-center flex flex-col justify-end p-6 shadow-xl smooth-transition hover:-translate-y-1.5" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80');">
+            <div class="absolute inset-0 bg-gradient-to-t from-lawnDarkGreen via-lawnDarkGreen/40 to-transparent z-0"></div>
+            <span class="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold z-10">Quote</span>
+            <div class="relative z-10">
+                <p class="text-lawnGreen text-[10px] uppercase font-bold tracking-widest mb-1">Vision</p>
+                <h3 class="text-lg font-bold mb-3 leading-snug text-white">"Transforming messy grounds into clean masterworks."</h3>
+            </div>
+        </div>
+
+        <div class="reveal-card relative h-[420px] rounded-2xl overflow-hidden bg-cover bg-center flex flex-col justify-end p-6 shadow-xl smooth-transition hover:-translate-y-1.5" style="background-image: url('https://images.unsplash.com/photo-1558882224-dda166733046?auto=format&fit=crop&w=800&q=80');">
+            <div class="absolute inset-0 bg-gradient-to-t from-lawnDarkGreen via-lawnDarkGreen/40 to-transparent z-0"></div>
+            <div class="relative z-10">
+                <p class="text-lawnGreen text-[10px] uppercase font-bold tracking-widest mb-1">Maintenance</p>
+                <h3 class="text-lg font-bold mb-3 leading-snug text-white">Seasonal Mulch Bed & Care Routine</h3>
+            </div>
+        </div>
+
+        <div class="reveal-card relative h-[420px] rounded-2xl overflow-hidden bg-cover bg-center flex flex-col justify-end p-6 shadow-xl smooth-transition hover:-translate-y-1.5" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80');">
+            <div class="absolute inset-0 bg-gradient-to-t from-lawnDarkGreen via-lawnDarkGreen/40 to-transparent z-0"></div>
+            <div class="relative z-10">
+                <p class="text-lawnGreen text-[10px] uppercase font-bold tracking-widest mb-1">Backyard</p>
+                <h3 class="text-lg font-bold mb-3 leading-snug text-white">Complete Paradise Re-structuring</h3>
+            </div>
+        </div>
+
+        <div class="reveal-card relative h-[420px] rounded-2xl overflow-hidden bg-cover bg-center flex flex-col justify-end p-6 shadow-xl smooth-transition hover:-translate-y-1.5" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d0fbb18d76e2?auto=format&fit=crop&w=800&q=80');">
+            <div class="absolute inset-0 bg-gradient-to-t from-lawnDarkGreen via-lawnDarkGreen/40 to-transparent z-0"></div>
+            <span class="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold z-10">Pro</span>
+            <div class="relative z-10">
+                <p class="text-lawnGreen text-[10px] uppercase font-bold tracking-widest mb-1">Hardscape</p>
+                <h3 class="text-lg font-bold mb-3 leading-snug text-white">Patio Stone & Precise Edging</h3>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<script>
+    // Mobile Menu Toggle Script
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuBtn.querySelector('i');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+        if (mobileMenu.classList.contains('flex')) {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-times');
+        } else {
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+        }
+    });
+
+    // Reveal Card Animation Script
+    document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll('.reveal-card');
+
+        cards.forEach((card, index) => {
+            const delay = (index % 3) * 0.15;
+            card.style.transitionDelay = `${delay}s`;
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        cards.forEach((el) => {
+            observer.observe(el);
+        });
+    });
+</script>
+
+<!-- SHORT FOOTER WITH MESSAGE INPUT FIELD -->
+<footer class="bg-lawnDarkGreen text-white/60 border-t border-white/5 py-10 px-4 md:px-12 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+        <p>&copy; 2026 J&B Lawn Services. All rights reserved.</p>
+        
+        <div class="w-full md:w-auto max-w-md flex flex-col items-center">
+            <form action="https://api.web3forms.com/submit" method="POST" id="quick-footer-form" class="flex w-full items-center gap-2 bg-white/5 p-1.5 rounded-full border border-white/10">
+                <input type="hidden" name="access_key" value="04ad0d1d-51a2-4dc8-92c0-a3a531277e6f">
+                <input type="hidden" name="subject" value="New Quick Message from Footer Bar">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <input type="text" name="message" placeholder="Send a quick message..." required
+                    class="w-full bg-transparent text-white placeholder-white/40 text-xs px-4 py-2 focus:outline-none">
+                
+                <button type="submit" id="quick-submit-btn"
+                    class="bg-lawnGreen hover:bg-green-600 active:scale-95 text-white font-bold px-5 py-2.5 rounded-full smooth-transition whitespace-nowrap cursor-pointer">
+                    Send <i class="fas fa-paper-plane ml-1 text-[10px]"></i>
+                </button>
+            </form>
+
+            <div id="quick-form-result" class="mt-2 text-center text-[10px] font-semibold"></div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const quickForm = document.getElementById('quick-footer-form');
+    const quickResult = document.getElementById('quick-form-result');
+    const quickSubmitBtn = document.getElementById('quick-submit-btn');
+
+    quickForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(quickForm);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+        
+        quickResult.innerHTML = "Sending...";
+        quickResult.className = "mt-2 text-center text-[10px] font-semibold text-white/50";
+        quickSubmitBtn.disabled = true;
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let jsonResponse = await response.json();
+            if (response.status == 200) {
+                quickResult.innerHTML = "Success! Message sent.";
+                quickResult.className = "mt-2 text-center text-[10px] font-semibold text-lawnGreen";
+                quickForm.reset();
+            } else {
+                quickResult.innerHTML = jsonResponse.message;
+                quickResult.className = "mt-2 text-center text-[10px] font-semibold text-red-400";
+            }
+        })
+        .catch(error => {
+            quickResult.innerHTML = "Failed! Try again.";
+            quickResult.className = "mt-2 text-center text-[10px] font-semibold text-red-400";
+        })
+        .then(() => {
+            quickSubmitBtn.disabled = false;
+            setTimeout(() => {
+                quickResult.innerHTML = "";
+            }, 5000);
+        });
+    });
+</script>
+
+</body>
+</html>
